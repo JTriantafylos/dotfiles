@@ -15,3 +15,8 @@ ln -siv "${src_dir}/zsh/zprofile" $zsh_dir/.zprofile
 # X11
 X11_dir=$HOME
 ln -siv "${src_dir}/X11/xinitrc" $X11_dir/.xinitrc
+
+# neovim
+nvim_dir=$HOME/.config/nvim
+ln -siv "${src_dir}/nvim/init.vim" $nvim_dir/init.vim
+ln -siv "${src_dir}/nvim/coc-settings.json" $nvim_dir/coc-settings.json
