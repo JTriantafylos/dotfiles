@@ -1,25 +1,18 @@
 HISTFILE=~/.zsh_hist
 HISTSIZE=65536
 SAVEHIST=65536
-setopt autocd extendedglob nomatch notify
-unsetopt beep
-bindkey -v
 
 autoload -Uz promptinit
 promptinit
 prompt pure
 
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-bindkey "^[[3~" delete-char
-
 alias vim="nvim"
 
-BASE16_SHELL_PLUS="$HOME/.config/base16-shell-plus/"
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL_PLUS/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL_PLUS/profile_helper.sh")"
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+base16_eighties
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
