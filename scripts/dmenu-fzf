@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Simple utility to
+
+dmenufzf_windowid=$(xdotool search --name "^dmenu-fzf$")
+i3_style_cmd="i3-msg floating enable, resize set 30ppt 25ppt, move to position center, border pixel 3"
+
+if [[ -n $dmenufzf_windowid ]]; then
+	xdotool windowclose $dmenufzf_windowid
+else
+	urxvtc -title "dmenu-fzf" -e i3-dmenu-desktop --dmenu=fzf && $i3_style_cmd
+fi
