@@ -6,10 +6,6 @@ SAVEHIST=65536
 autoload -Uz compinit
 compinit
 
-autoload -U promptinit
-promptinit
-prompt pure
-
 # Aliases
 alias vim="nvim"
 
@@ -22,6 +18,9 @@ bindkey "^[[2~" 	overwrite-mode # Insert
 bindkey "^[[3~" 	delete-char # Delete
 bindkey "^[[5~" 	beginning-of-history #PageUp
 bindkey "^[[6~" 	end-of-history #PageDown
+
+# Starship prompt
+eval "$(starship init zsh)"
 
 # Base16-Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
