@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Simple utility to create a pseudo-dmenu using urxvt and fzf.
+# Requires i3, xdotool, and urxvt
 
 dmenufzf_windowid=$(xdotool search --name "^dmenu-fzf$")
 
