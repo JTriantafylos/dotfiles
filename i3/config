@@ -60,7 +60,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+q kill
 
 # Start application launcher
-bindcode $super exec --no-startup-id /home/james/.dotfiles/scripts/dmenu-fzf
+bindcode $super exec --no-startup-id $HOME/.dotfiles/scripts/dmenu-fzf
 
 # Change focused container
 bindsym $mod+j focus left
