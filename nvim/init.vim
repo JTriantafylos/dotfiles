@@ -10,7 +10,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'chriskempson/base16-vim'
 call plug#end()
 
-
 "
 " Option declarations
 "
