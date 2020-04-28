@@ -6,8 +6,9 @@ SAVEHIST=65536
 autoload -Uz compinit
 compinit
 
-autoload -Uz bashcompinit
-bashcompinit
+autoload -U promptinit
+promptinit
+prompt pure
 
 # Aliases
 alias vim="nvim"
