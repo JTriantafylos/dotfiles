@@ -27,6 +27,10 @@ ln -sv "${src_dir}/nvim/coc-settings.json" $nvim_dir/coc-settings.json
 picom_dir=$HOME/.config/picom
 ln -sv "${src_dir}/picom/picom.conf" $picom_dir/picom.conf
 
+# starship
+starship_dir=$HOME/.config
+ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
+
 # wallpaper
 wallpaper_dir=$HOME
 ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/.wallpaper.jpg
