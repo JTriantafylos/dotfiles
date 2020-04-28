@@ -56,7 +56,7 @@
 ! URxvt Settings
 
 ! Set terminal font(s)
-URxvt.font: xft:Source Code Pro:style=SemiBold:size=11, xft:Iosevka:size=11
+URxvt.font: xft:Source Code Pro:style=SemiBold:pixelsize=12, xft:Iosevka:pixelsize=12
 
 ! Set terminal letter spacing
 URxvt.letterSpace: -1
