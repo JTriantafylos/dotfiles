@@ -2,12 +2,21 @@ HISTFILE=~/.zsh_hist
 HISTSIZE=65536
 SAVEHIST=65536
 
-# Modules
+# Completion
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle :compinstall filename '/home/james/.zshrc'
+
 autoload -Uz compinit
 compinit
 
 # Aliases
 alias vim="nvim"
+alias ls="ls --color=auto"
+alias l="ls -la --color=auto"
 
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
@@ -29,4 +38,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 base16_eighties
 
+# zsh-syntax-highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
