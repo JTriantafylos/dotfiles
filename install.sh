@@ -16,6 +16,7 @@ ln -sv "${src_dir}/zsh/zlogin" $zsh_dir/.zlogin
 # X11
 X11_dir=$HOME
 ln -sv "${src_dir}/X11/xinitrc" $X11_dir/.xinitrc
+ln -sv "${src_dir}/X11/xprofile" $X11_dir/.xprofile
 ln -sv "${src_dir}/X11/Xresources" $X11_dir/.Xresources
 
 # neovim
