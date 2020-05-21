@@ -32,10 +32,6 @@ ln -sv "${src_dir}/picom/picom.conf" $picom_dir/picom.conf
 starship_dir=$HOME/.config
 ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
 
-# tmux
-tmux_dir=$HOME
-ln -sv "${src_dir}/tmux/tmux.conf" $tmux_dir/.tmux.conf
-
 # wallpaper
 wallpaper_dir=$HOME
 ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/.wallpaper.jpg
