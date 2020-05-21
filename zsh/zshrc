@@ -25,6 +25,8 @@ alias l="ls -la --color=auto"
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
 bindkey "^[[1;5D" 	backward-word # Ctrl+Left
+bindkey "^[[4~" 	forward-word # Home
+bindkey "^[[1~" 	backward-word # End
 bindkey "^[[7~" 	beginning-of-line # Home
 bindkey "^[[8~" 	end-of-line # End
 bindkey "^[[2~" 	overwrite-mode # Insert
