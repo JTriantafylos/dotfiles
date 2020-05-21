@@ -5,6 +5,7 @@ xrandr --auto --output HDMI-0 --right-of DP-4 & # Setup monitor placement
 xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Profile Enabled" 0, 1 & # Disable mouse acceleration
 xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Speed" 0.5 & # Adjust mouse sensitivity
 xrdb -load $HOME/.Xresources & # Load .Xresources
+setxkbmap -option caps:ctrl_modifier &
 
 sleep 1 && # Give xrdb a moment to load .Xresources
 exec i3 # Start i3
