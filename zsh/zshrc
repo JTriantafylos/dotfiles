@@ -22,8 +22,8 @@ export EDITOR=vim
 
 # Aliases
 alias vim="nvim"
-alias ls="ls --color=auto"
-alias l="ls -lA --color=auto"
+alias ls="exa --color=auto"
+alias l="exa -la --color=auto"
 alias gs="git status"
 alias mv="mv -i"
 alias rm="rm -i"
