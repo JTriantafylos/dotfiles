@@ -3,4 +3,4 @@ add_newline = false # Don't print a new line at the start of the prompt
 # PWD settings
 [directory]
 style = "bold blue"
-
+truncate_to_repo = false
