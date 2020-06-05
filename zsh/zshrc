@@ -17,10 +17,16 @@ compinit
 autoload -U select-word-style
 select-word-style bash
 
+# Defaults
+export EDITOR=vim
+
 # Aliases
 alias vim="nvim"
 alias ls="ls --color=auto"
-alias l="ls -la --color=auto"
+alias l="ls -lA --color=auto"
+alias gs="git status"
+alias mv="mv -i"
+alias rm="rm -i"
 
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
