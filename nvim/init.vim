@@ -21,24 +21,31 @@ set updatetime=200 " Increase diagnostic message frequency
 set shortmess+=c " Disable ins-completion-menu messages
 set signcolumn=yes " enable sign column
 set number " Enable line numbers
-set tabstop=4 shiftwidth=4 " Set tabs to be 4 spaces wide
 set undodir=~/.config/nvim/backups " Set undo directory
 set undofile " Enable persistent undo
-set scrolloff=5 " Keep 3 lines below and above the cursor
+set scrolloff=5 " Keep 5 lines below and above the cursor
 set dictionary=/usr/share/dict/words " Source dictionary words from /usr/share/dict/words
+set noshowmode " Disable writing what mode vim is in to the status line
+filetype plugin indent on " Enable filetype dependant indenting
+set tabstop=4 " show existing tab with 4 spaces width
+set shiftwidth=4 " when indenting with '>', use 4 spaces width
+set expandtab " On pressing tab, insert 4 spaces
 
 "
 " Base16-shell compatibility options
 "
 
 if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
+    let base16colorspace=256
+    source ~/.vimrc_background
 endif
 
 "
 " Keybind declarations
 "
+
+" Enable mouse use
+set mouse=a
 
 " Use <Space> as leader
 let mapleader=" "
@@ -67,13 +74,13 @@ vmap <Down> g<Down>
 
 " Use tab for trigger completion with characters ahead
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <C-space> to trigger completion.
@@ -95,22 +102,22 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-	if (index(['vim','help'], &filetype) >= 0)
-		execute 'h '.expand('<cword>')
-	else
-		call CocAction('doHover')
-	endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
 endfunction
 
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 augroup mygroup
-	autocmd!
-	" Setup formatexpr specified filetype(s).
-	autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-	" Update signature help on jump placeholder
-	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Using CocList
@@ -147,7 +154,7 @@ autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expand
 
 " Template declaration for Pandoc notes template
 augroup templates
-	autocmd BufNewFile *.pandoc 0r Template.pandoc
+    autocmd BufNewFile *.pandoc 0r Template.pandoc
 augroup END
 
 "Always open help files in a rightward vertical split
@@ -158,17 +165,89 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " Hide the statusline when FZF is open
 if has('nvim') && !exists('g:fzf_layout')
-	autocmd! FileType fzf
-	autocmd  FileType fzf set laststatus=0 noshowmode noruler
-				\ | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+    autocmd! FileType fzf
+    autocmd  FileType fzf set laststatus=0 noshowmode noruler
+                \ | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 endif
 
 " Add preview to :Files
 command! -bang -nargs=? -complete=dir Files
-			\ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+            \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Add preview to :Rg
 command! -bang -nargs=* Rg
-			\ call fzf#vim#grep(
-			\   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-			\   fzf#vim#with_preview(), <bang>0)
+            \ call fzf#vim#grep(
+            \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+            \   fzf#vim#with_preview(), <bang>0)
+
+"
+" Statusline configuration
+"
+
+function! Padding()
+    return printf(" ")
+endfunction
+
+function! HoveredFunction()
+    let mFunction=''
+    if strlen(get(b:, 'coc_current_function', '')) > 0
+        let mFunction=mFunction . get(b:, 'coc_current_function', '')
+        let mFunction=mFunction . '()'
+    endif
+    return mFunction
+endfunction
+
+let g:currentmode={
+            \ 'n'  : 'Normal',
+            \ 'no' : 'N·Operator Pending',
+            \ 'v'  : 'Visual',
+            \ 'V'  : 'V·Line',
+            \ 'x22' : 'V·Block',
+            \ 's'  : 'Select',
+            \ 'S'  : 'S·Line',
+            \ 'x19' : 'S·Block',
+            \ 'i'  : 'Insert',
+            \ 'R'  : 'Replace',
+            \ 'Rv' : 'V·Replace',
+            \ 'c'  : 'Command',
+            \ 'cv' : 'Vim Ex',
+            \ 'ce' : 'Ex',
+            \ 'r'  : 'Prompt',
+            \ 'rm' : 'More',
+            \ 'r?' : 'Confirm',
+            \ '!'  : 'Shell',
+            \ 't'  : 'Terminal'
+            \}
+
+set statusline=
+
+set statusline+=%#Title#
+set statusline+=\ %{g:currentmode[mode()]}
+set statusline+=%{Padding()}
+
+set statusline+=%#Pmenu#
+set statusline+=\ %f
+set statusline+=\ %m
+
+set statusline+=%=
+
+set statusline+=%#TabLineSel#
+set statusline+=%{HoveredFunction()}
+set statusline+=%{Padding()}
+
+set statusline+=%#WarningMsg#
+set statusline+=%{Padding()}
+set statusline+=COC:%{coc#status()}
+set statusline+=%{Padding()}
+
+set statusline+=%#TabLineSel#
+set statusline+=\ %y
+set statusline+=%{Padding()}
+
+set statusline+=%#DiffDelete#
+set statusline+=\ %r
+set statusline+=%{Padding()}
+
+set statusline+=%#CursorLine#
+set statusline+=\ %l:%c
+set statusline+=%{Padding()}

@@ -24,5 +24,6 @@
         }
     },
 	"python.jediEnabled": false,
-	"coc.source.dictionary.filetypes": ["markdown", "pandoc"]
+	"coc.source.dictionary.filetypes": ["markdown", "pandoc"],
+	"coc.preferences.currentFunctionSymbolAutoUpdate": true
 }
