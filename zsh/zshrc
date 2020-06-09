@@ -28,6 +28,11 @@ alias gs="git status"
 alias mv="mv -i"
 alias rm="rm -i"
 
+alias man=man_view
+man_view() {
+    nvim -c "Man $1" -c "only"
+}
+
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
 bindkey "^[[1;5D" 	backward-word # Ctrl+Left
