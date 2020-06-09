@@ -184,7 +184,7 @@ bindsym $mod+Shift+Mod2+KP_Up 		move container to workspace number $ws18
 bindsym $mod+Shift+Mod2+KP_Prior 	move container to workspace number $ws19
 bindsym $mod+Shift+Mod2+KP_Insert 	move container to workspace number $ws20
 
-# Restart i3 inplace with specialized script to ensure synchronicity with base16-shell-plus
+# Restart i3 inplace
 bindsym $mod+Shift+r restart
 
 # Resize mode bindings
