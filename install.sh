@@ -11,13 +11,13 @@ ln -sv "${src_dir}/i3/statusline" $i3_dir/statusline
 # zsh
 zsh_dir=$HOME
 ln -sv "${src_dir}/zsh/zshrc" $zsh_dir/.zshrc
-ln -sv "${src_dir}/zsh/zlogin" $zsh_dir/.zlogin
+ln -sv "${src_dir}/zsh/zshenv" $zsh_dir/.zshenv
 
 # X11
-X11_dir=$HOME
-ln -sv "${src_dir}/X11/xinitrc" $X11_dir/.xinitrc
-ln -sv "${src_dir}/X11/xprofile" $X11_dir/.xprofile
-ln -sv "${src_dir}/X11/Xresources" $X11_dir/.Xresources
+X11_dir=$HOME/.config/X11
+ln -sv "${src_dir}/X11/xinitrc" $X11_dir/xinitrc
+ln -sv "${src_dir}/X11/Xresources" $X11_dir/Xresources
+ln -sv "${src_dir}/X11/xprofile" $HOME/.xprofile
 
 # neovim
 nvim_dir=$HOME/.config/nvim
@@ -33,5 +33,5 @@ starship_dir=$HOME/.config
 ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
 
 # wallpaper
-wallpaper_dir=$HOME
-ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/.wallpaper.jpg
+wallpaper_dir=$HOME/.config
+ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/wallpaper.jpg

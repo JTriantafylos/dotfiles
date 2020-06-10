@@ -1,4 +1,4 @@
-HISTFILE=~/.zsh_hist
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=65536
 SAVEHIST=65536
 
@@ -11,7 +11,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle :compinstall filename '/home/james/.zshrc'
 autoload -Uz compinit
-compinit
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 # Module to ctrl+w to last slash or last space
 autoload -U select-word-style
