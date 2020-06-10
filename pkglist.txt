@@ -39,7 +39,6 @@ npm
 numlockx
 nvidia
 pacman-contrib
-patch
 picom
 pkgconf
 pulseaudio
@@ -58,7 +57,6 @@ which
 xclip
 xdotool
 xorg-server
-xorg-xev
 xorg-xinit
 xorg-xinput
 xorg-xrandr
