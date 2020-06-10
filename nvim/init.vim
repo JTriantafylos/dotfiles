@@ -219,10 +219,14 @@ let g:currentmode={
             \ 't'  : 'Terminal'
             \}
 
+function! GetMode()
+    return get(g:currentmode, mode(), 'Unknown')
+endfunction
+
 set statusline=
 
 set statusline+=%#Title#
-set statusline+=\ %{g:currentmode[mode()]}
+set statusline+=\ %{GetMode()}
 set statusline+=%{Padding()}
 
 set statusline+=%#Pmenu#
