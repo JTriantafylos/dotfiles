@@ -43,6 +43,7 @@ picom
 pkgconf
 pulseaudio
 pulsemixer
+python-pip
 qemu
 ripgrep
 rxvt-unicode
