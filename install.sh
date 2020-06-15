@@ -24,10 +24,6 @@ nvim_dir=$HOME/.config/nvim
 ln -sv "${src_dir}/nvim/init.vim" $nvim_dir/init.vim
 ln -sv "${src_dir}/nvim/coc-settings.json" $nvim_dir/coc-settings.json
 
-# picom
-picom_dir=$HOME/.config/picom
-ln -sv "${src_dir}/picom/picom.conf" $picom_dir/picom.conf
-
 # starship
 starship_dir=$HOME/.config
 ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml

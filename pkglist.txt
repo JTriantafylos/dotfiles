@@ -38,6 +38,7 @@ noto-fonts
 npm
 numlockx
 nvidia
+nvidia-settings
 pacman-contrib
 picom
 pkgconf
