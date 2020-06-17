@@ -40,7 +40,6 @@ numlockx
 nvidia
 nvidia-settings
 pacman-contrib
-picom
 pkgconf
 pulseaudio
 pulsemixer
