@@ -47,7 +47,6 @@ pulsemixer
 python-pip
 qemu
 ripgrep
-rxvt-unicode
 sddm
 starship
 sudo

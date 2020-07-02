@@ -38,8 +38,8 @@ man_view() {
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
 bindkey "^[[1;5D" 	backward-word # Ctrl+Left
-bindkey "^[[7~" 	beginning-of-line # Home
-bindkey "^[[8~" 	end-of-line # End
+bindkey "^[[H" 	beginning-of-line # Home
+bindkey "^[[F" 	end-of-line # End
 bindkey "^[[2~" 	overwrite-mode # Insert
 bindkey "^[[3~" 	delete-char # Delete
 bindkey "^[[5~" 	beginning-of-history #PageUp
