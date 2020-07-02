@@ -39,6 +39,7 @@ npm
 numlockx
 nvidia
 nvidia-settings
+openssh
 pacman-contrib
 perf
 pkgconf
