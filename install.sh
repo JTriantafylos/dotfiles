@@ -8,6 +8,10 @@ i3_dir=$HOME/.config/i3
 ln -sv "${src_dir}/i3/config" $i3_dir/config
 ln -sv "${src_dir}/i3/statusline" $i3_dir/statusline
 
+# termite
+termite_dir=$HOME/.config/termite
+ln -sv "${src_dir}/termite/config" $termite_dir/config
+
 # zsh
 zsh_dir=$HOME
 ln -sv "${src_dir}/zsh/zshrc" $zsh_dir/.zshrc

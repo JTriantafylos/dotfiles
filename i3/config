@@ -54,7 +54,7 @@ exec --no-startup-id feh --bg-scale /home/james/.config/wallpaper.jpg
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # Kill focused window
 bindsym $mod+q kill
@@ -239,3 +239,6 @@ client.background       $base00
 gaps inner 12
 smart_gaps inverse_outer
 smart_borders no_gaps
+
+# Application-specific settings
+for_window [title="dmenu-fzf"] floating enable, resize set 30ppt 25ppt, move to position center, border pixel 3

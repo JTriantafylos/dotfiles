@@ -1,5 +1,4 @@
 numlockx & # Enable numlock
-urxvtd -q -f -o & # Start urxvt daemon
 
 xrandr --auto --output HDMI-0 --right-of DP-4 & # Setup monitor placement
 xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Profile Enabled" 0, 1 & # Disable mouse acceleration

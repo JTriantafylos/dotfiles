@@ -40,6 +40,7 @@ numlockx
 nvidia
 nvidia-settings
 pacman-contrib
+perf
 pkgconf
 pulseaudio
 pulsemixer
@@ -50,6 +51,7 @@ rxvt-unicode
 sddm
 starship
 sudo
+termite
 texinfo
 ttf-iosevka
 unzip
