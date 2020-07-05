@@ -35,3 +35,9 @@ ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
 # wallpaper
 wallpaper_dir=$HOME/.config
 ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/wallpaper.jpg
+
+#scripts
+scripts_dir=$HOME/.local/bin
+ln -sv "${src_dir}/scripts/dmenu-fzf" $scripts_dir/dmenu-fzf
+ln -sv "${src_dir}/scripts/newterm" $scripts_dir/newterm
+
