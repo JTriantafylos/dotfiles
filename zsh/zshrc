@@ -23,6 +23,7 @@ export Browser=chromium
 
 # Aliases
 alias vim="nvim"
+alias cat="bat --theme=ansi-dark --paging=never"
 alias ls="exa --color=auto"
 alias l="exa -lah --color=auto"
 alias gs="git status"
