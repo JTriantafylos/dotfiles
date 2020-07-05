@@ -1,8 +1,10 @@
 adobe-source-code-pro-fonts
 amd-ucode
+android-studio-dummy
 autoconf
 automake
 base
+bat
 bear
 binutils
 bison
@@ -31,6 +33,7 @@ m4
 make
 man-db
 man-pages
+mongodb-bin
 multimc5
 neovim
 nodejs
@@ -43,6 +46,7 @@ openssh
 pacman-contrib
 perf
 pkgconf
+postman-bin
 pulseaudio
 pulsemixer
 python-pip
@@ -53,7 +57,6 @@ starship
 sudo
 termite
 texinfo
-ttf-iosevka
 unzip
 virt-manager
 which
