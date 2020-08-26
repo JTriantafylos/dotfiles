@@ -59,6 +59,7 @@ sudo
 teamspeak3
 termite
 texinfo
+ts3audiobot
 unzip
 virt-manager
 which
@@ -69,5 +70,6 @@ xorg-xinit
 xorg-xinput
 xorg-xrandr
 yay
+youtube-dl
 zsh
 zsh-syntax-highlighting
