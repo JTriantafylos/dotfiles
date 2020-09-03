@@ -32,10 +32,9 @@ alias mv="mv -iv"
 alias rm="rm -iv"
 alias cp="cp -iv"
 
-alias man=man_view
-man_view() {
-    nvim -c "Man $1" -c "only"
-}
+# Use neovim as the man pager
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
 
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
