@@ -19,6 +19,7 @@ select-word-style bash
 
 # Defaults
 export EDITOR=vim
+export TERMINAL=termite
 export Browser=chromium
 
 # Aliases

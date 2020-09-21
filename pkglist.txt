@@ -3,6 +3,7 @@ amd-ucode
 android-studio-dummy
 autoconf
 automake
+awesome
 base
 bat
 bear
@@ -29,6 +30,7 @@ libtool
 libvirt
 linux
 linux-firmware
+luarocks
 m4
 make
 man-db
