@@ -10,6 +10,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'chriskempson/base16-vim'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 "
