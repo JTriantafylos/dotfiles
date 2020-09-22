@@ -89,6 +89,12 @@ nmap <Down> g<Down>
 vmap <Up> g<Up>
 vmap <Down> g<Down>
 
+" Remap window movement to use leader and arrow keys
+map <leader><Up> :wincmd k<CR>
+map <leader><Down> :wincmd j<CR>
+map <leader><Left> :wincmd h<CR>
+map <leader><Right> :wincmd l<CR>
+
 " Allow use of arrow keys to skip between selected parameters
 smap <C-Right> <C-j>
 smap <C-Left> <C-k>
