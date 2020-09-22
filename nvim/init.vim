@@ -38,6 +38,8 @@ set undofile " Enable persistent undo
 set scrolloff=5 " Keep 5 lines below and above the cursor
 set dictionary=/usr/share/dict/words " Source dictionary words from /usr/share/dict/words
 set noshowmode " Disable writing what mode vim is in to the status line
+set ignorecase " Ignore case in searches
+set smartcase " Don't ignore case if case is used
 filetype plugin indent on " Enable filetype dependent indenting
 syntax on " Enables syntax highlighting
 
@@ -68,10 +70,14 @@ nmap <leader>rn <Plug>(coc-rename)
 " Unsets the search highlighting by hitting enter in normal mode
 nnoremap <CR> :noh<CR><CR>
 
-nnoremap <silent> Gd :SignifyHunkDiff<cr>
+" Bind Gd to show the hunk diff of the hovered line
+nnoremap <silent> <leader>gd :SignifyHunkDiff<cr>
+
+" Bind Gf to open FZF GitFiles
+nnoremap <silent> <leader>gf :GFiles<CR>
 
 " Bind leader+g to open FZF Rg
-nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>gg :Rg<CR>
 
 " Bind gf to open FZF Files
 nnoremap <silent> gf :Files<CR>
@@ -166,8 +172,8 @@ nnoremap xx :x<CR>
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
-autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
+" Turn on cursor line for active window (split)
 augroup ActiveWindowHighlight
     autocmd!
     autocmd WinEnter * set cul
