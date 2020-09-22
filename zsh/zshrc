@@ -24,7 +24,7 @@ export Browser=chromium
 
 # Aliases
 alias vim="nvim"
-alias cat="bat --theme=ansi-dark --paging=never"
+alias cat="bat --theme=base16 --paging=never"
 alias ls="exa --color=auto"
 alias l="exa -lah --color=auto"
 alias gs="git status"
@@ -62,6 +62,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_PREVIEW_COMMAND="bat --style=numbers --theme=base16 --color=always \$FILE" # Sets the default preview options for fzf.vim
+
 
 # Write installed packages to text file
 pacman -Qqe > $HOME/.dotfiles/pkglist.txt

@@ -4,9 +4,11 @@
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'sheerun/vim-polyglot'
+Plug 'mhinz/vim-signify'
 Plug 'chriskempson/base16-vim'
 call plug#end()
 
@@ -15,21 +17,30 @@ call plug#end()
 "
 
 set clipboard+=unnamedplus " Enable use of system clipboard
+set cul " Enabled the cursor line highlight
 set hidden " Enable switching buffers without saving
 set cmdheight=2 " Show command output on 2 lines
-set updatetime=200 " Increase diagnostic message frequency
+set updatetime=100 " Increase diagnostic message frequency
 set shortmess+=c " Disable ins-completion-menu messages
-set signcolumn=yes " enable sign column
+set nobackup " Some LSP have issues with backups
+set nowritebackup " Some LSP have issues with backups
+
+if has("patch-8.1.1564") " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
 set number " Enable line numbers
 set undodir=~/.config/nvim/backups " Set undo directory
 set undofile " Enable persistent undo
 set scrolloff=5 " Keep 5 lines below and above the cursor
 set dictionary=/usr/share/dict/words " Source dictionary words from /usr/share/dict/words
 set noshowmode " Disable writing what mode vim is in to the status line
-filetype plugin indent on " Enable filetype dependant indenting
-set tabstop=4 " show existing tab with 4 spaces width
-set shiftwidth=4 " when indenting with '>', use 4 spaces width
-set expandtab " On pressing tab, insert 4 spaces
+filetype plugin indent on " Enable filetype dependent indenting
+syntax on " Enables syntax highlighting
+
+let g:peekaboo_window="vert bo 50new" " Make the vim-peekaboo preview window a little bit wider (30 default)
 
 "
 " Base16-shell compatibility options
@@ -53,6 +64,11 @@ let mapleader=" "
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
+" Unsets the search highlighting by hitting enter in normal mode
+nnoremap <CR> :noh<CR><CR>
+
+nnoremap <silent> Gd :SignifyHunkDiff<cr>
+
 " Bind leader+g to open FZF Rg
 nnoremap <silent> <leader>g :Rg<CR>
 
@@ -71,6 +87,10 @@ nmap <Up> g<Up>
 nmap <Down> g<Down>
 vmap <Up> g<Up>
 vmap <Down> g<Down>
+
+" Allow use of arrow keys to skip between selected parameters
+smap <C-Right> <C-j>
+smap <C-Left> <C-k>
 
 " Use tab for trigger completion with characters ahead
 inoremap <silent><expr> <TAB>
@@ -109,17 +129,6 @@ function! s:show_documentation()
     endif
 endfunction
 
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-augroup mygroup
-    autocmd!
-    " Setup formatexpr specified filetype(s).
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
@@ -152,23 +161,17 @@ nnoremap xx :x<CR>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
-" Template declaration for Pandoc notes template
-augroup templates
-    autocmd BufNewFile *.pandoc 0r Template.pandoc
+augroup ActiveWindowHighlight
+    autocmd!
+    autocmd WinEnter * set cul
+    autocmd WinLeave * set nocul
 augroup END
 
-"Always open help files in a rightward vertical split
+" Always open help files in a rightward vertical split
 autocmd FileType help wincmd L
 
 " Remove whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
-
-" Hide the statusline when FZF is open
-if has('nvim') && !exists('g:fzf_layout')
-    autocmd! FileType fzf
-    autocmd  FileType fzf set laststatus=0 noshowmode noruler
-                \ | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-endif
 
 " Add preview to :Files
 command! -bang -nargs=? -complete=dir Files
@@ -181,6 +184,12 @@ command! -bang -nargs=* Rg
             \   fzf#vim#with_preview(), <bang>0)
 
 "
+" Highlight configuration
+"
+highlight Pmenu ctermfg=15 ctermbg=19
+highlight StatusLineBufferTitle cterm=bold ctermfg=13  ctermbg=18
+
+"
 " Statusline configuration
 "
 
@@ -191,8 +200,10 @@ endfunction
 function! HoveredFunction()
     let mFunction=''
     if strlen(get(b:, 'coc_current_function', '')) > 0
+        let mFunction=mFunction . ' '
         let mFunction=mFunction . get(b:, 'coc_current_function', '')
         let mFunction=mFunction . '()'
+        let mFunction=mFunction . ' '
     endif
     return mFunction
 endfunction
@@ -223,13 +234,25 @@ function! GetMode()
     return get(g:currentmode, mode(), 'Unknown')
 endfunction
 
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0 ? '   '.l:branchname.' ' : ''
+endfunction
+
 set statusline=
 
-set statusline+=%#Title#
+set statusline+=%#DiffText#
 set statusline+=\ %{GetMode()}
 set statusline+=%{Padding()}
 
-set statusline+=%#Pmenu#
+set statusline+=%#ModeMsg#
+set statusline+=%{StatuslineGit()}
+
+set statusline+=%#StatusLineBufferTitle#
 set statusline+=\ %f
 set statusline+=\ %m
 
@@ -237,7 +260,6 @@ set statusline+=%=
 
 set statusline+=%#TabLineSel#
 set statusline+=%{HoveredFunction()}
-set statusline+=%{Padding()}
 
 set statusline+=%#WarningMsg#
 set statusline+=%{Padding()}
@@ -249,9 +271,8 @@ set statusline+=\ %y
 set statusline+=%{Padding()}
 
 set statusline+=%#DiffDelete#
-set statusline+=\ %r
-set statusline+=%{Padding()}
+set statusline+=\%r
 
 set statusline+=%#CursorLine#
-set statusline+=\ %l:%c
+set statusline+=\%l:%c
 set statusline+=%{Padding()}
