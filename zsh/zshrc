@@ -18,7 +18,7 @@ autoload -U select-word-style
 select-word-style bash
 
 # Defaults
-export EDITOR=vim
+export EDITOR=nvim
 export TERMINAL=termite
 export Browser=chromium
 
