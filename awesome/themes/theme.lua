@@ -7,6 +7,7 @@ local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 local xrdb = xresources.get_current_theme()
+local gshape require("gears.shape")
 local gfs = require("gears.filesystem")
 
 -- inherit default theme
@@ -49,6 +50,7 @@ theme.titlebar_size = dpi(10)
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
+theme.taglist_fg_focus = xrdb.color15
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -99,15 +101,9 @@ theme.awesome_icon = theme_assets.awesome_icon(
 )
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_shape_border_width_focus = 5
-theme.taglist_shape_border_color_focus = theme.color6
+local taglist_square_size = dpi(0)
+theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
+theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
 
 -- Set wallpaper
 theme.wallpaper = wallpaper_path

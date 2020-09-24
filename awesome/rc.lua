@@ -131,9 +131,9 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a taglist widget
     s.taglist = awful.widget.taglist {
-        screen  = s,
-        filter  = awful.widget.taglist.filter.noempty,
-        buttons = taglist_buttons
+    screen  = s,
+    filter  = awful.widget.taglist.filter.noempty,
+    buttons = taglist_buttons
     }
 
     -- Create the wibox
