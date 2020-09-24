@@ -8,6 +8,14 @@ i3_dir=$HOME/.config/i3
 ln -sv "${src_dir}/i3/config" $i3_dir/config
 ln -sv "${src_dir}/i3/statusline" $i3_dir/statusline
 
+# xmonad
+xmonad_dir=$HOME/.config/xmonad
+ln -sv "${src_dir}/xmonad/xmonad.hs" $xmonad_dir/xmonad.hs
+
+# xmobar
+xmobar_dir=$HOME/.config/xmobar
+ln -sv "${src_dir}/xmobar/xmobarrc" $xmobar_dir/xmobarrc
+
 # awesome
 awesome_dir=$HOME/.config/awesome
 ln -sv "${src_dir}/awesome/rc.lua" $awesome_dir/rc.lua

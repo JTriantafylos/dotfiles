@@ -61,7 +61,9 @@ base16_eighties
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+export FZF_DEFAULT_OPTS="--color=16 --info=inline"
 export FZF_PREVIEW_COMMAND="bat --style=numbers --theme=base16 --color=always \$FILE" # Sets the default preview options for fzf.vim
 
 

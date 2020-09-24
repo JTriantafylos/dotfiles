@@ -67,6 +67,9 @@ virt-manager
 which
 xclip
 xdotool
+xmobar
+xmonad
+xmonad-contrib
 xorg-server
 xorg-xinit
 xorg-xinput
