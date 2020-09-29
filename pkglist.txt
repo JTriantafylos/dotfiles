@@ -52,7 +52,10 @@ pkgconf
 postman-bin
 pulseaudio
 pulsemixer
+python-i3ipc
+python-jedi
 python-pip
+python-pylint
 qemu
 ripgrep
 sddm
@@ -67,9 +70,6 @@ virt-manager
 which
 xclip
 xdotool
-xmobar
-xmonad
-xmonad-contrib
 xorg-server
 xorg-xinit
 xorg-xinput

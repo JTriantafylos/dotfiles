@@ -6,6 +6,4 @@ xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Speed" 0.5 &
 xrdb -load $HOME/.config/X11/Xresources & # Load .Xresources
 
 sleep 1 && # Give xrdb a moment to load .Xresources
-# exec i3 # Start i3
-# exec awesome # Start awesome
-exec xmonad # Start xmonad
+exec i3 # Start i3
