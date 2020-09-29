@@ -23,11 +23,19 @@
 			}
 		}
 	},
-	"python.jediEnabled": false,
+
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"coc.preferences.extensionUpdateCheck": "weekly",
+
 	"diagnostic.infoSign": "▷",
 	"diagnostic.hintSign": "▶",
 	"diagnostic.warningSign": "!",
-	"diagnostic.errorSign": "‼"
-}
+	"diagnostic.errorSign": "‼",
+
+	"tabnine.priority": 9,
+
+	"python.jediEnabled": false,
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"python.linting.pylintUseMinimalCheckers": false
+	}

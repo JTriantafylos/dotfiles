@@ -11,6 +11,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-commentary'
+Plug 'mboughaba/i3config.vim'
 call plug#end()
 
 "
@@ -144,7 +145,7 @@ endfunction
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands
