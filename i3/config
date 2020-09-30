@@ -262,5 +262,6 @@ smart_borders no_gaps
 
 # Application-specific settings
 for_window [title="dmenu-fzf"] floating enable, resize set 30ppt 25ppt, move to position center, border pixel 3
+for_window [title="Android Emulator.*"] floating enable
 
 # vim: filetype=i3config
