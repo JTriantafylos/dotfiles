@@ -3,7 +3,6 @@ amd-ucode
 android-studio-dummy
 autoconf
 automake
-awesome
 base
 bat
 bear
@@ -30,7 +29,6 @@ libtool
 libvirt
 linux
 linux-firmware
-luarocks
 m4
 make
 man-db
@@ -53,7 +51,6 @@ postman-bin
 pulseaudio
 pulsemixer
 python-i3ipc
-python-jedi
 python-pip
 python-pylint
 qemu
@@ -64,6 +61,18 @@ sudo
 teamspeak3
 termite
 texinfo
+texlive-bibtexextra
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 ts3audiobot
 unzip
 virt-manager
@@ -76,5 +85,7 @@ xorg-xinput
 xorg-xrandr
 yay
 youtube-dl
+zathura
+zathura-pdf-mupdf
 zsh
 zsh-syntax-highlighting
