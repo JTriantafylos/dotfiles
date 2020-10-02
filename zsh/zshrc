@@ -66,6 +66,5 @@ source /usr/share/fzf/completion.zsh
 export FZF_DEFAULT_OPTS="--color=16 --info=inline"
 export FZF_PREVIEW_COMMAND="bat --style=numbers --theme=base16 --color=always \$FILE" # Sets the default preview options for fzf.vim
 
-
 # Write installed packages to text file
 pacman -Qqe > $HOME/.dotfiles/pkglist.txt
