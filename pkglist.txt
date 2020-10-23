@@ -33,9 +33,10 @@ m4
 make
 man-db
 man-pages
+minecraft-technic-launcher
 mongodb-bin
 mongodb-compass
-multimc5
+multimc-git
 neovim
 nodejs
 noto-fonts
