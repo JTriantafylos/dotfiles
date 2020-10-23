@@ -11,6 +11,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-commentary'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'mboughaba/i3config.vim'
 call plug#end()
 
