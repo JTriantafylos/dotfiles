@@ -256,7 +256,7 @@ client.placeholder      $base00 $base00 $base0F $base00 $base00
 client.background       $base00
 
 # Gap settings
-gaps inner 12
+gaps inner 8
 smart_gaps inverse_outer
 smart_borders no_gaps
 
