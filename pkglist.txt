@@ -55,6 +55,7 @@ python-i3ipc
 python-pip
 python-pylint
 qemu
+redshift
 ripgrep
 sddm
 starship
