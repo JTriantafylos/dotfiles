@@ -32,10 +32,6 @@ ln -sv "${src_dir}/nvim/coc-settings.json" $nvim_dir/coc-settings.json
 starship_dir=$HOME/.config
 ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
 
-# redshift
-redshift_dir=$HOME/.config/redshift
-ln -sv "${src_dir}/redshift/redshift.conf" $redshift_dir/redshift.conf
-
 # wallpaper
 wallpaper_dir=$HOME/.config
 ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/wallpaper.jpg
