@@ -168,9 +168,6 @@ nnoremap ww :w<CR>
 " Close buffer
 nnoremap qq :bd<CR>
 
-" Save and close buffer
-nnoremap xx :x<CR>
-
 "
 " Function declarations
 "
