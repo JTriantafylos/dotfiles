@@ -3,9 +3,10 @@
 "
 
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'antoinemadec/coc-fzf'
 Plug 'junegunn/vim-peekaboo'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
@@ -49,6 +50,11 @@ filetype plugin indent on " Enable filetype dependent indenting
 syntax on " Enables syntax highlighting
 
 let g:peekaboo_window="vert bo 50new" " Make the vim-peekaboo preview window a little bit wider (30 default)
+
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.65, 'highlight': 'Title', 'border': 'rounded' } } " Configure fzf.vim popup window
+let g:fzf_preview_window = ['up:50%'] " Set the fzf.vim preview window to take up the top half of the popup window
+
+let g:coc_fzf_opts = ['--color=16', '--info=inline'] " Set coc-fzf opts to match FZF_DEFAULT_OPTS
 
 "
 " Base16-shell compatibility options
@@ -187,16 +193,6 @@ autocmd FileType help wincmd L
 
 " Remove whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
-
-" Add preview to :Files
-command! -bang -nargs=? -complete=dir Files
-            \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-" Add preview to :Rg
-command! -bang -nargs=* Rg
-            \ call fzf#vim#grep(
-            \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-            \   fzf#vim#with_preview(), <bang>0)
 
 "
 " Highlight configuration
