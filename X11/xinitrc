@@ -2,7 +2,7 @@ numlockx & # Enable numlock
 
 xrandr --auto --output HDMI-0 --right-of DP-4 & # Setup monitor placement
 xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Profile Enabled" 0, 1 & # Disable mouse acceleration
-xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Speed" 0.5 & # Adjust mouse sensitivity
+xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Speed" 0 & # Disable mouse acceleration
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1 # Enable trackpad natural scrolling
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1 # Enable trackpad tap-to-click
 xrdb -load $HOME/.config/X11/Xresources & # Load .Xresources
