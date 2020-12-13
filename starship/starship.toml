@@ -9,3 +9,6 @@ truncate_to_repo = false
 ahead = "↑"
 behind = "↓"
 diverged = "↕"
+
+[cmake]
+disabled = true
