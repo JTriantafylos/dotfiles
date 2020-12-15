@@ -14,6 +14,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'mboughaba/i3config.vim'
+Plug 'derekwyatt/vim-fswitch'
 call plug#end()
 
 "
@@ -95,6 +96,9 @@ nnoremap <silent> gf :Files<CR>
 
 " Goto buffer keybind
 nnoremap <silent> gb :Buffer<CR>
+
+" Goto companion file (.c/.cpp to .h and vice versa)
+nnoremap <silent> gh :FSHere<CR>
 
 " Keep visual block selected when indenting
 vmap > >gv
