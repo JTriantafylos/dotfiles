@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'mboughaba/i3config.vim'
 Plug 'derekwyatt/vim-fswitch'
+Plug 'delphinus/vim-firestore'
 call plug#end()
 
 "
