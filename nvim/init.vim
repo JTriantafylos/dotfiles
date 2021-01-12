@@ -16,6 +16,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'mboughaba/i3config.vim'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'delphinus/vim-firestore'
+
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 "
