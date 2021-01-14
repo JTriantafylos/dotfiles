@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+TERM=xterm ssh student@134.117.132.44

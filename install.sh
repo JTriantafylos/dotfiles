@@ -41,3 +41,5 @@ ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/wallpaper.jpg
 scripts_dir=$HOME/.local/bin
 ln -sv "${src_dir}/scripts/dmenu-fzf" $scripts_dir/dmenu-fzf
 ln -sv "${src_dir}/scripts/newterm" $scripts_dir/newterm
+ln -sv "${src_dir}/scripts/carleton-vpn-connect" $scripts_dir/carleton-vpn-connect
+ln -sv "${src_dir}/scripts/carleton-ssh-COMP3000B" $scripts_dir/carleton-ssh-COMP3000B
