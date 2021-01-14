@@ -48,9 +48,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-# Start picom compositor
-exec --no-startup-id picom -b
-
 # Set destop wallpaper
 exec --no-startup-id feh --bg-scale /home/james/.config/wallpaper.jpg
 
@@ -106,6 +103,10 @@ bindsym $mod+f fullscreen toggle
 
 # Toggle tiling / floating
 bindsym $mod+space floating toggle
+
+# Switch workplaces with scroll wheel
+bindsym --whole-window $mod+button4 workspace prev_on_output
+bindsym --whole-window $mod+button5 workspace next_on_output
 
 # Workspace variables
 set $ws1 	"1"
