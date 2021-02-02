@@ -42,12 +42,13 @@ export MANWIDTH=999
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
 bindkey "^[[1;5D" 	backward-word # Ctrl+Left
-bindkey "^[[H" 	beginning-of-line # Home
-bindkey "^[[F" 	end-of-line # End
+bindkey "^[[H" 	    beginning-of-line # Home
+bindkey "^[[F" 	    end-of-line # End
 bindkey "^[[2~" 	overwrite-mode # Insert
 bindkey "^[[3~" 	delete-char # Delete
 bindkey "^[[5~" 	beginning-of-history #PageUp
 bindkey "^[[6~" 	end-of-history #PageDown
+bindkey "^[[Z"      reverse-menu-complete # Shift+Tab
 
 # Starship prompt
 eval "$(starship init zsh)"
