@@ -27,7 +27,7 @@ ln -sv "${src_dir}/X11/xprofile" $HOME/.xprofile
 nvim_dir=$HOME/.config/nvim
 ln -sv "${src_dir}/nvim/init.vim" $nvim_dir/init.vim
 ln -sv "${src_dir}/nvim/coc-settings.json" $nvim_dir/coc-settings.json
-ln -sv "${src_dir}/nvim/modules" $nvim_dir/modules
+ln -sv ${src_dir}/nvim/modules/* $nvim_dir/modules/
 
 # starship
 starship_dir=$HOME/.config
