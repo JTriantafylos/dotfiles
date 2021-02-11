@@ -33,6 +33,10 @@ ln -sv ${src_dir}/nvim/modules/* $nvim_dir/modules/
 starship_dir=$HOME/.config
 ln -sv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
 
+# zathura
+zathura_dir=$HOME/.config/zathura
+ln -sv "${src_dir}/zathura/zathurarc" $zathura_dir/zathurarc
+
 # wallpaper
 wallpaper_dir=$HOME/.config
 ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/wallpaper.jpg
