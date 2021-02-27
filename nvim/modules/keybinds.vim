@@ -18,14 +18,14 @@ nnoremap <CR> :noh<CR><CR>
 " Bind Gd to show the hunk diff of the hovered line
 nnoremap <silent> <leader>gd :SignifyHunkDiff<cr>
 
-" Bind Gf to open FZF GitFiles
+" Bind leader+f to open FZF Files
+nnoremap <silent> <leader>f :Files<CR>
+
+" Bind leader+g+f to open FZF GitFiles
 nnoremap <silent> <leader>gf :GFiles<CR>
 
-" Bind leader+g to open FZF Rg
+" Bind leader+g+g to open FZF Rg
 nnoremap <silent> <leader>gg :Rg<CR>
-
-" Bind gf to open FZF Files
-nnoremap <silent> gf :Files<CR>
 
 " Goto buffer keybind
 nnoremap <silent> gb :Buffer<CR>
