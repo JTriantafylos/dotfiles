@@ -39,7 +39,7 @@ ln -sv "${src_dir}/zathura/zathurarc" $zathura_dir/zathurarc
 
 # wallpaper
 wallpaper_dir=$HOME/.config
-ln -sv "${src_dir}/wallpaper/wallpaper.jpg" $wallpaper_dir/wallpaper.jpg
+ln -sv "${src_dir}/wallpaper/wallpaper2.jpg" $wallpaper_dir/wallpaper.jpg
 
 #scripts
 scripts_dir=$HOME/.local/bin
