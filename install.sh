@@ -26,6 +26,14 @@ ln -sfv "${src_dir}/X11/xinitrc" $X11_dir/xinitrc
 ln -sfv "${src_dir}/X11/Xresources" $X11_dir/Xresources
 ln -sfv "${src_dir}/X11/xprofile" $HOME/.xprofile
 
+# GTK2
+gtk2_dir=$HOME/.config/gtk-2.0
+ln -sfv "${src_dir}/gtk2/gtkrc" $gtk2_dir/gtkrc
+
+# GTK3
+gtk3_dir=$HOME/.config/gtk-3.0
+ln -sfv "${src_dir}/gtk3/settings.ini" $gtk3_dir/settings.ini
+
 # neovim
 nvim_dir=$HOME/.config/nvim
 ln -sfv "${src_dir}/nvim/init.vim" $nvim_dir/init.vim
