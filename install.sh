@@ -7,6 +7,10 @@ src_dir=$(dirname $(realpath $0))
 i3_dir=$HOME/.config/i3
 ln -sfv "${src_dir}/i3/config" $i3_dir/config
 
+# sstatus
+sstatus_dir=$HOME/.config/sstatus
+ln -sfv "${src_dir}/sstatus/config.toml" $sstatus_dir/config.toml
+
 # termite
 termite_dir=$HOME/.config/termite
 ln -sfv "${src_dir}/termite/config" $termite_dir/config

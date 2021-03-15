@@ -1,0 +1,92 @@
+[General]
+RefreshTime = 1000
+
+### SCHEMA ###
+# [[StatusItems]]
+# Script = ""
+# Interval = 0
+# ForegroundColor = ""
+# BackgroundColor = ""
+# BorderColor = ""
+# BorderWidthTop = 0
+# BorderWidthBottom = 0
+# BorderWidthLeft = 0
+# BorderWidthRight = 0
+# MinimumWidth = 0
+# Alignment = ""
+# Name = ""
+# Instance = ""
+# Urgent = false
+# SeperatorAfter = true
+# SeparatorBlockWidth = 9
+
+[[StatusItems]]
+Script = "printf \"I love Tasha!\""
+Interval = -1
+ForegroundColor = "#f771f7"
+BackgroundColor = ""
+BorderColor = ""
+BorderWidthTop = 0
+BorderWidthBottom = 0
+BorderWidthLeft = 0
+BorderWidthRight = 0
+MinimumWidth = 0
+Alignment = ""
+Name = ""
+Instance = ""
+Urgent = false
+SeperatorAfter = true
+
+[[StatusItems]]
+Script = "printf \"CPU: $(sensors -u | awk '/CPUTIN/{getline; print}' | awk -F ' ' '{print $2}' | awk -F . '{print $1}')°C\""
+Interval = 5
+ForegroundColor = "#6699cc"
+BackgroundColor = ""
+BorderColor = ""
+BorderWidthTop = 0
+BorderWidthBottom = 0
+BorderWidthLeft = 0
+BorderWidthRight = 0
+MinimumWidth = 0
+Alignment = ""
+Name = ""
+Instance = ""
+Urgent = false
+SeperatorAfter = true
+SeparatorBlockWidth = 9
+
+[[StatusItems]]
+Script = "curl --silent \"wttr.in?format=\"%l:+%C+%t\"\""
+Interval = 300
+ForegroundColor = "#99cc99"
+BackgroundColor = ""
+BorderColor = ""
+BorderWidthTop = 0
+BorderWidthBottom = 0
+BorderWidthLeft = 0
+BorderWidthRight = 0
+MinimumWidth = 0
+Alignment = ""
+Name = ""
+Instance = ""
+Urgent = false
+SeperatorAfter = true
+SeparatorBlockWidth = 9
+
+[[StatusItems]]
+Script = "date +\"%l:%M:%S%p %Y-%m-%d\""
+Interval = 1
+ForegroundColor = "#cc99cc"
+BackgroundColor = ""
+BorderColor = ""
+BorderWidthTop = 0
+BorderWidthBottom = 0
+BorderWidthLeft = 0
+BorderWidthRight = 0
+MinimumWidth = 0
+Alignment = ""
+Name = ""
+Instance = ""
+Urgent = false
+SeperatorAfter = true
+SeparatorBlockWidth = 9
