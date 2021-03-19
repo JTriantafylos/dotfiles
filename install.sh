@@ -26,6 +26,10 @@ ln -sfv "${src_dir}/X11/xinitrc" $X11_dir/xinitrc
 ln -sfv "${src_dir}/X11/Xresources" $X11_dir/Xresources
 ln -sfv "${src_dir}/X11/xprofile" $HOME/.xprofile
 
+# XDG
+XDG_dir=$HOME/.config/
+ln -sfv "${src_dir}/users-dirs.dirs" $XDG_dir/users-dirs.dirs
+
 # GTK2
 gtk2_dir=$HOME/.config/gtk-2.0
 ln -sfv "${src_dir}/gtk2/gtkrc" $gtk2_dir/gtkrc
