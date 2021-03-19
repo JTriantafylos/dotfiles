@@ -62,6 +62,7 @@ bindsym $mod+q kill
 
 # Start application launcher
 bindcode $super exec --no-startup-id $HOME/.dotfiles/scripts/dmenu-fzf
+bindsym $mod+p exec --no-startup-id $HOME/.dotfiles/scripts/volume
 
 # Change focused container
 bindsym $mod+j focus left
@@ -267,6 +268,7 @@ smart_borders no_gaps
 
 # Application-specific settings
 for_window [title="dmenu-fzf"] floating enable, resize set 30ppt 25ppt, move to position center, border pixel 3
+for_window [title="volume"] floating enable, resize set 75ppt 40ppt, move to position center, border pixel 3
 for_window [title="Android Emulator.*"] floating enable
 for_window [class="jetbrains-studio" title="Settings"] floating disable
 

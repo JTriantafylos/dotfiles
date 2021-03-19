@@ -56,5 +56,6 @@ ln -sfv "${src_dir}/wallpaper/wallpaper2.jpg" $wallpaper_dir/wallpaper.jpg
 scripts_dir=$HOME/.local/bin
 ln -sfv "${src_dir}/scripts/dmenu-fzf" $scripts_dir/dmenu-fzf
 ln -sfv "${src_dir}/scripts/newterm" $scripts_dir/newterm
+ln -sfv "${src_dir}/scripts/volume" $scripts_dir/volume
 ln -sfv "${src_dir}/scripts/carleton-vpn-connect" $scripts_dir/carleton-vpn-connect
 ln -sfv "${src_dir}/scripts/carleton-ssh-COMP3000B" $scripts_dir/carleton-ssh-COMP3000B
