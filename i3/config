@@ -105,6 +105,9 @@ bindsym $mod+f fullscreen toggle
 # Toggle tiling / floating
 bindsym $mod+space floating toggle
 
+# Toggle gaps
+bindsym $mod+g gaps inner all toggle 8
+
 # Switch workplaces with scroll wheel
 bindsym --whole-window $mod+button4 workspace prev_on_output
 bindsym --whole-window $mod+button5 workspace next_on_output
