@@ -52,6 +52,10 @@ ln -sfv "${src_dir}/starship/starship.toml" $starship_dir/starship.toml
 zathura_dir=$HOME/.config/zathura
 ln -sfv "${src_dir}/zathura/zathurarc" $zathura_dir/zathurarc
 
+# redshift
+redshift_dir=$HOME/.config/redshift
+ln -sfv "${src_dir}/redshift/redshift.conf" $redshift_dir/redshift.conf
+
 # wallpaper
 wallpaper_dir=$HOME/.config
 ln -sfv "${src_dir}/wallpaper/wallpaper2.jpg" $wallpaper_dir/wallpaper.jpg
