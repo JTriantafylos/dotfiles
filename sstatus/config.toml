@@ -1,74 +1,25 @@
-[General]
-RefreshTime = 1000
+Order = [ "Tasha", "Weather", "Date" ]
 
-### SCHEMA ###
-# [[StatusItems]]
-# Script = ""
-# Interval = 0
-# ForegroundColor = ""
-# BackgroundColor = ""
-# BorderColor = ""
-# BorderWidthTop = 0
-# BorderWidthBottom = 0
-# BorderWidthLeft = 0
-# BorderWidthRight = 0
-# MinimumWidth = 0
-# Alignment = ""
-# Name = ""
-# Instance = ""
-# Urgent = false
-# SeperatorAfter = true
-# SeparatorBlockWidth = 9
-
-[[StatusItems]]
+[Tasha]
 Script = "printf \"I love Tasha!\""
 Interval = -1
 ForegroundColor = "#f771f7"
 BackgroundColor = ""
 BorderColor = ""
-BorderWidthTop = 0
-BorderWidthBottom = 0
-BorderWidthLeft = 0
-BorderWidthRight = 0
-MinimumWidth = 0
-Alignment = ""
-Name = ""
-Instance = ""
-Urgent = false
-SeperatorAfter = true
+SeparatorAfter = true
 
-[[StatusItems]]
+[Weather]
 Script = "curl --silent \"wttr.in?format=\"%l:+%C+%t\"\""
-Interval = 300
+Interval = 300000
 ForegroundColor = "#99cc99"
 BackgroundColor = ""
 BorderColor = ""
-BorderWidthTop = 0
-BorderWidthBottom = 0
-BorderWidthLeft = 0
-BorderWidthRight = 0
-MinimumWidth = 0
-Alignment = ""
-Name = ""
-Instance = ""
-Urgent = false
-SeperatorAfter = true
-SeparatorBlockWidth = 9
+SeparatorAfter = true
 
-[[StatusItems]]
+[Date]
 Script = "date +\"%l:%M:%S%p %Y-%m-%d\""
-Interval = 1
+Interval = 1000
 ForegroundColor = "#cc99cc"
 BackgroundColor = ""
 BorderColor = ""
-BorderWidthTop = 0
-BorderWidthBottom = 0
-BorderWidthLeft = 0
-BorderWidthRight = 0
-MinimumWidth = 0
-Alignment = ""
-Name = ""
-Instance = ""
-Urgent = false
-SeperatorAfter = true
-SeparatorBlockWidth = 9
+SeparatorAfter = true
