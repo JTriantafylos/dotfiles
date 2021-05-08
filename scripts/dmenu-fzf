@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# Simple utility to create a pseudo-dmenu using termite and fzf.
-# Requires i3, xdotool, and termite
+# Simple utility to create a pseudo-dmenu using alacritty and fzf.
+# Requires i3, xdotool, and alacritty
 
 dmenufzf_windowid=$(xdotool search --name "^dmenu-fzf$")
 
 if [[ -n $dmenufzf_windowid ]]; then
 	xdotool windowclose $dmenufzf_windowid
 else
-	termite -t "dmenu-fzf" -e "i3-dmenu-desktop --dmenu=\"fzf --reverse --color=16\""
+    i3-msg exec "alacritty -t \"dmenu-fzf\" -e i3-dmenu-desktop --dmenu=\"fzf --reverse --color=16\""
 fi
