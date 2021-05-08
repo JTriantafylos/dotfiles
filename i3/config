@@ -50,6 +50,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Set destop wallpaper
 exec --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/wallpaper.jpg
+exec --no-startup-id picom -b
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

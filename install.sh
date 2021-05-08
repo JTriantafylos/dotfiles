@@ -28,7 +28,11 @@ ln -sfv "${src_dir}/X11/xprofile" $HOME/.xprofile
 
 # XDG
 XDG_dir=$HOME/.config/
-ln -sfv "${src_dir}/users-dirs.dirs" $XDG_dir/users-dirs.dirs
+ln -sfv "${src_dir}/XDG/users-dirs.dirs" $XDG_dir/users-dirs.dirs
+
+# picom
+picom_dir=$HOME/.config/picom
+ln -sfv "${src_dir}/picom/picom.conf" $picom_dir/picom.conf
 
 # GTK2
 gtk2_dir=$HOME/.config/gtk-2.0
