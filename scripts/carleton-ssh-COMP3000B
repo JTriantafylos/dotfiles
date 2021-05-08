@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-ssh -J jamestriantafylos@access.scs.carleton.ca student@134.117.132.44
