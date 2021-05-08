@@ -11,9 +11,9 @@ ln -sfv "${src_dir}/i3/config" $i3_dir/config
 sstatus_dir=$HOME/.config/sstatus
 ln -sfv "${src_dir}/sstatus/config.toml" $sstatus_dir/config.toml
 
-# termite
-termite_dir=$HOME/.config/termite
-ln -sfv "${src_dir}/termite/config" $termite_dir/config
+# alacritty
+alacritty_dir=$HOME/.config/alacritty
+ln -sfv "${src_dir}/alacritty/alacritty.yml" $alacritty_dir/alacritty.yml
 
 # zsh
 zsh_dir=$HOME

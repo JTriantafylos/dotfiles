@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Simple script to spawn a new instance of termite in the CWD.
-# Requires termite.
-termite -d $PWD &
+# Simple script to spawn a new instance of alacritty in the CWD.
+# Requires alacritty.
+alacritty --working-directory $PWD &
 disown
