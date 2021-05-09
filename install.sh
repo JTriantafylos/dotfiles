@@ -28,7 +28,7 @@ ln -sfv "${src_dir}/X11/xprofile" $HOME/.xprofile
 
 # XDG
 XDG_dir=$HOME/.config/
-ln -sfv "${src_dir}/XDG/users-dirs.dirs" $XDG_dir/users-dirs.dirs
+ln -sfv "${src_dir}/XDG/user-dirs.dirs" $XDG_dir/user-dirs.dirs
 
 # picom
 picom_dir=$HOME/.config/picom
