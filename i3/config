@@ -27,7 +27,7 @@ set $mod mod1
 set $super 133
 
 # Output variables
-set $primary_output HDMI-0
+set $primary_output DVI-I-1
 set $secondary_output DP-4
 
 # Font for window titles. Will also be used by the bar unless a different font
