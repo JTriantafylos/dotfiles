@@ -240,7 +240,7 @@ bindsym $mod+r mode "Resize"
 # finds out, if available)
 bar {
     status_command $HOME/Projects/sstatus/bin/sstatus
-    #status_command $HOME/.config/i3/sstatus
+    #status_command sstatus
 
     colors {
         background $base00
