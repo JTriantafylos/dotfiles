@@ -19,8 +19,8 @@ select-word-style bash
 
 # Defaults
 export EDITOR=nvim
-export TERMINAL=termite
-export Browser=chromium
+export TERMINAL=alacritty
+export BROWSER=firefox
 
 # Aliases
 alias vim="nvim"
