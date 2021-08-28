@@ -50,7 +50,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Set destop wallpaper
 exec --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/wallpaper.jpg
+
+# Auto-start compositor
 exec --no-startup-id picom -b
+
+# Auto-start Nextcloud/ownCloud sync client with 5 second delay
+exec --no-startup-id "sh -c 'sleep 5; exec owncloud'"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -241,6 +246,7 @@ bindsym $mod+r mode "Resize"
 bar {
     status_command $HOME/Projects/sstatus/bin/sstatus
     #status_command sstatus
+    tray_output primary
 
     colors {
         background $base00
