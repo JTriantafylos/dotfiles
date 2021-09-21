@@ -281,5 +281,6 @@ for_window [title="dmenu-fzf"] floating enable, resize set 30ppt 25ppt, move to 
 for_window [title="volume"] floating enable, resize set 75ppt 40ppt, move to position center, border pixel 3
 for_window [title="Android Emulator.*"] floating enable
 for_window [class="jetbrains-studio" title="Settings"] floating disable
+for_window [class="^libreoffice"] border normal 3
 
 # vim: filetype=i3config
