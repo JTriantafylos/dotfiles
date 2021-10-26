@@ -1,9 +1,17 @@
-Order = [ "Tasha", "Weather", "Date" ]
+Order = [ "Tasha", "VPN", "Weather", "Date" ]
 
 [Tasha]
 Script = "printf \"I love Tasha!\""
 Interval = -1
 ForegroundColor = "#f771f7"
+BackgroundColor = ""
+BorderColor = ""
+SeparatorAfter = true
+
+[VPN]
+Script = "echo VPN:  $(curl --silent https://am.i.mullvad.net/json | jq '.mullvad_exit_ip' | awk '{ print toupper( substr( $0, 1, 1 ) ) substr( $0, 2 ); }')"
+Interval = 5000
+ForegroundColor = "#99cc99"
 BackgroundColor = ""
 BorderColor = ""
 SeparatorAfter = true
