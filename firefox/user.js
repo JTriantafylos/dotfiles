@@ -330,7 +330,7 @@ user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF]
  * [2] https://wiki.mozilla.org/Security/DOH-resolver-policy
  * [3] https://blog.mozilla.org/mozilla/news/firefox-by-default-dns-over-https-rollout-in-canada/
  * [4] https://www.eff.org/deeplinks/2020/12/dns-doh-and-odoh-oh-my-year-review-2020 ***/
-   // user_pref("network.trr.mode", 5);
+user_pref("network.trr.mode", 3);
 /* 0706: disable proxy direct failover for system requests [FF91+]
  * [WARNING] Default true is a security feature against malicious extensions [1]
  * [SETUP-CHROME] If you use a proxy and you trust your extensions
