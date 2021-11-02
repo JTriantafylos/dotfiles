@@ -884,21 +884,21 @@ user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+]
 user_pref("_user.js.parrot", "2800 syntax error: the parrot's bleedin' demised!");
 /* 2802: enable Firefox to clear items on shutdown (2803)
  * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes ***/
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+    // user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 /* 2803: set what items to clear on shutdown (if 2802 is true) [SETUP-CHROME]
  * [NOTE] If "history" is true, downloads will also be cleared
  * [NOTE] Active Logins: does not refer to logins via cookies, but rather HTTP Basic Authentication [1]
  * [NOTE] Offline Website Data: localStorage, service worker cache, QuotaManager (IndexedDB, asm-cache)
  * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes>Settings
  * [1] https://en.wikipedia.org/wiki/Basic_access_authentication ***/
-user_pref("privacy.clearOnShutdown.cache", true);
-user_pref("privacy.clearOnShutdown.cookies", true);
-user_pref("privacy.clearOnShutdown.downloads", true); // see note above
-user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
-user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
-user_pref("privacy.clearOnShutdown.offlineApps", true); // Offline Website Data
-user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins
-user_pref("privacy.clearOnShutdown.siteSettings", false); // Site Preferences
+    // user_pref("privacy.clearOnShutdown.cache", true);
+    // user_pref("privacy.clearOnShutdown.cookies", true);
+    // user_pref("privacy.clearOnShutdown.downloads", true); // see note above
+    // user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
+    // user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
+    // user_pref("privacy.clearOnShutdown.offlineApps", true); // Offline Website Data
+    // user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins
+    // user_pref("privacy.clearOnShutdown.siteSettings", false); // Site Preferences
 /* 2804: reset default items to clear with Ctrl-Shift-Del (to match 2803) [SETUP-CHROME]
  * This dialog can also be accessed from the menu History>Clear Recent History
  * Firefox remembers your last choices. This will reset them when you start Firefox
