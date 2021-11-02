@@ -789,7 +789,7 @@ user_pref("permissions.delegation.enabled", false);
 /* 2651: enable user interaction for security by always asking where to download
  * [SETUP-CHROME] On Android this blocks longtapping and saving images
  * [SETTING] General>Downloads>Always ask you where to save files ***/
-user_pref("browser.download.useDownloadDir", false);
+    // user_pref("browser.download.useDownloadDir", false);
 /* 2652: disable adding downloads to the system's "recent documents" list ***/
 user_pref("browser.download.manager.addToRecentDocs", false);
 
@@ -1045,7 +1045,7 @@ user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDE
  * [1] https://bugzilla.mozilla.org/1407366
  * [2] https://hg.mozilla.org/mozilla-central/rev/6d2d7856e468#l2.32 ***/
     // user_pref("privacy.resistFingerprinting.letterboxing", true); // [HIDDEN PREF]
-   // user_pref("privacy.resistFingerprinting.letterboxing.dimensions", ""); // [HIDDEN PREF]
+    // user_pref("privacy.resistFingerprinting.letterboxing.dimensions", ""); // [HIDDEN PREF]
 /* 4505: experimental RFP [FF91+]
  * [WARNING] DO NOT USE unless testing, see [1] comment 12
  * [1] https://bugzilla.mozilla.org/1635603 ***/
