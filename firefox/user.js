@@ -950,7 +950,7 @@ user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation [FF51+]
  * [SETUP-WEB] Breaks some cross-origin logins
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1260931,1299996 ***/
-user_pref("privacy.firstparty.isolate", true);
+    // user_pref("privacy.firstparty.isolate", true);
 /* 4002: enforce FPI restriction for window.opener [FF54+]
  * [NOTE] Setting this to false may reduce the breakage in 4001
  * FF65+ blocks postMessage with targetOrigin "*" if originAttributes don't match. But
