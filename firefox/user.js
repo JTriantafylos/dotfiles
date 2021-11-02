@@ -1355,30 +1355,30 @@ user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switc
    // user_pref("startup.homepage_welcome_url.additional", "");
    // user_pref("startup.homepage_override_url", ""); // What's New page after updates
 /* WARNINGS ***/
-   // user_pref("browser.tabs.warnOnClose", false); // [DEFAULT false FF94+]
-   // user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+user_pref("browser.tabs.warnOnClose", false); // [DEFAULT false FF94+]
+user_pref("browser.tabs.warnOnCloseOtherTabs", false);
    // user_pref("browser.tabs.warnOnOpen", false);
    // user_pref("full-screen-api.warning.delay", 0);
    // user_pref("full-screen-api.warning.timeout", 0);
 /* APPEARANCE ***/
    // user_pref("browser.download.autohideButton", false); // [FF57+]
-   // user_pref("ui.systemUsesDarkTheme", 1); // [FF67+] [HIDDEN PREF]
+user_pref("ui.systemUsesDarkTheme", 1); // [FF67+] [HIDDEN PREF]
       // 0=light, 1=dark: with RFP this only affects chrome
    // user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
    // user_pref("ui.prefersReducedMotion", 1); // disable chrome animations [FF77+] [RESTART] [HIDDEN PREF]
       // 0=no-preference, 1=reduce: with RFP this only affects chrome
 /* CONTENT BEHAVIOR ***/
    // user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
-   // user_pref("clipboard.autocopy", false); // disable autocopy default [LINUX]
+user_pref("clipboard.autocopy", false); // disable autocopy default [LINUX]
    // user_pref("layout.spellcheckDefault", 2); // 0=none, 1-multi-line, 2=multi-line & single-line
 /* UX BEHAVIOR ***/
-   // user_pref("browser.backspace_action", 2); // 0=previous page, 1=scroll up, 2=do nothing
+user_pref("browser.backspace_action", 2); // 0=previous page, 1=scroll up, 2=do nothing
    // user_pref("browser.quitShortcut.disabled", true); // disable Ctrl-Q quit shortcut [LINUX] [MAC] [FF87+]
    // user_pref("browser.tabs.closeWindowWithLastTab", false);
    // user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab [FF57+]
    // user_pref("browser.urlbar.decodeURLsOnCopy", true); // see bugzilla 1320061 [FF53+]
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
-   // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
+user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
 /* UX FEATURES ***/
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New toolbar icon [FF69+]
