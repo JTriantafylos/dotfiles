@@ -3,6 +3,10 @@
 # Setup
 src_dir=$(dirname $(realpath $0))
 
+# firefox
+firefox_profile_dir=$HOME/.mozilla/firefox/hardened
+ln -sfv "${src_dir}/firefox/user.js" $firefox_profile_dir/user.js
+
 # i3
 i3_dir=$HOME/.config/i3
 ln -sfv "${src_dir}/i3/config" $i3_dir/config
