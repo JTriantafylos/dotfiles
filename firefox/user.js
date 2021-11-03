@@ -1380,6 +1380,7 @@ user_pref("browser.backspace_action", 2); // 0=previous page, 1=scroll up, 2=do 
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
 user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
+user_pref("ui.context_menus.after_mouseup", true); // Fix automatically selecting first menu option on right-click
 /* UX FEATURES ***/
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New toolbar icon [FF69+]
    // user_pref("extensions.pocket.enabled", false); // Pocket Account [FF46+]
@@ -1394,7 +1395,13 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
       // [SETTING] General>Browsing>Recommend features as you browse
    // user_pref("network.manage-offline-status", false); // see bugzilla 620472
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
-user_pref("ui.context_menus.after_mouseup", true); // Fix automatically selecting first menu option on right-click
+
+/* HARDWARE ACCELERATION (https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration) ***/
+user_pref("gfx.webrender.all", true); // Force the WebRender compositor to be used
+user_pref("media.ffmpeg.vaapi.enabled", true); // Enable VA-API with FFmpeg
+user_pref("media.ffvpx.enabled", false); // Disable the internal decoders for VP8/VP9, could break YouTube
+user_pref("media.navigator.mediadatadecoder_vpx_enabled", true); // Enable hardware VA-API decoding for WebRTC
+user_pref("media.rdd-vpx.enabled", false); // Disable the remote data decoder process for VP8/VP9
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
    Documentation denoted as [-]. Items deprecated in FF78 or earlier have been archived at [1]
