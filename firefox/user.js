@@ -1396,12 +1396,8 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
    // user_pref("network.manage-offline-status", false); // see bugzilla 620472
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 
-/* HARDWARE ACCELERATION (https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration) ***/
-user_pref("gfx.webrender.all", true); // Force the WebRender compositor to be used
-user_pref("media.ffmpeg.vaapi.enabled", true); // Enable VA-API with FFmpeg
-user_pref("media.ffvpx.enabled", false); // Disable the internal decoders for VP8/VP9, could break YouTube
-user_pref("media.navigator.mediadatadecoder_vpx_enabled", true); // Enable hardware VA-API decoding for WebRTC
-user_pref("media.rdd-vpx.enabled", false); // Disable the remote data decoder process for VP8/VP9
+/* HARDWARE ACCELERATION (https://wiki.archlinux.org/title/Firefox#Disable_hardware_video_acceleration) ***/
+user_pref("layers.acceleration.disabled", true); // Disable all hardware acceleration
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
    Documentation denoted as [-]. Items deprecated in FF78 or earlier have been archived at [1]
