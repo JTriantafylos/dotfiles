@@ -1394,6 +1394,7 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
       // [SETTING] General>Browsing>Recommend features as you browse
    // user_pref("network.manage-offline-status", false); // see bugzilla 620472
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
+user_pref("ui.context_menus.after_mouseup", true); // Fix automatically selecting first menu option on right-click
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
    Documentation denoted as [-]. Items deprecated in FF78 or earlier have been archived at [1]
