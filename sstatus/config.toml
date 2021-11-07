@@ -1,4 +1,4 @@
-Order = [ "Tasha", "VPN", "Weather", "Date" ]
+Order = [ "Tasha", "VPN", "Date" ]
 
 [Tasha]
 Script = "printf \"I love Tasha!\""
@@ -9,16 +9,8 @@ BorderColor = ""
 SeparatorAfter = true
 
 [VPN]
-Script = "echo VPN:  $(curl --silent https://am.i.mullvad.net/json | jq '.mullvad_exit_ip' | awk '{ print toupper( substr( $0, 1, 1 ) ) substr( $0, 2 ); }')"
+Script = "printf \"Network Location: $(curl --silent https://am.i.mullvad.net/city), $(curl --silent https://am.i.mullvad.net/country)\""
 Interval = 5000
-ForegroundColor = "#99cc99"
-BackgroundColor = ""
-BorderColor = ""
-SeparatorAfter = true
-
-[Weather]
-Script = "curl --silent \"wttr.in?format=\"%l:+%C+%t\"\""
-Interval = 300000
 ForegroundColor = "#99cc99"
 BackgroundColor = ""
 BorderColor = ""
