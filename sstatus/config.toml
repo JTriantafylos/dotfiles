@@ -9,7 +9,7 @@ BorderColor = ""
 SeparatorAfter = true
 
 [VPN]
-Script = "printf \"Network Location: $(curl --silent https://am.i.mullvad.net/city), $(curl --silent https://am.i.mullvad.net/country)\""
+Script = "printf \"IP Location: $(curl --silent https://am.i.mullvad.net/city), $(curl --silent https://am.i.mullvad.net/country)\""
 Interval = 5000
 ForegroundColor = "#99cc99"
 BackgroundColor = ""
