@@ -1,4 +1,4 @@
-export HISTFILE="$XDG_DATA_HOME"/zsh/history
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=65536
 SAVEHIST=65536
 
