@@ -2,9 +2,9 @@
 " Base16-shell compatibility options
 "
 
-if filereadable(expand("~/.config/nvim/vimrc_background"))
+if filereadable(expand("$XDG_STATE_HOME/base16/vimrc_background"))
     let base16colorspace=256
-    source ~/.config/nvim/vimrc_background
+    source $XDG_STATE_HOME/base16/vimrc_background
 endif
 
 "
