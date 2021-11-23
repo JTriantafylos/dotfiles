@@ -22,5 +22,6 @@ set smartcase " Don't ignore case if case is used
 set tabstop=4 " Correct tab size to 4 spaces
 set shiftwidth=4  " Correct tab size to 4 space
 set expandtab " Use spaces instead of tabs
+set shm+=I " Disable intro/splash screen
 filetype plugin indent on " Enable filetype dependent indenting
 syntax on " Enables syntax highlighting
