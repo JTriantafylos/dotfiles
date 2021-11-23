@@ -10,13 +10,7 @@ set updatetime=100 " Increase diagnostic message frequency
 set shortmess+=c " Disable ins-completion-menu messages
 set nobackup " Some LSP have issues with backups
 set nowritebackup " Some LSP have issues with backups
-
-if has("patch-8.1.1564") " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-
+set signcolumn=number " Display signs in the number column
 set number " Enable line numbers
 set undodir=~/.config/nvim/backups " Set undo directory
 set undofile " Enable persistent undo
