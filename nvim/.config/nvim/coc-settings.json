@@ -11,7 +11,8 @@
                 "client": {
                     "snippetSupport": true
                 },
-                "compilationDatabaseDirectory": "build"
+                "compilationDatabaseDirectory": "build",
+                "highlight": { "lsRanges" : true }
             }
         }
     },
