@@ -43,15 +43,6 @@ function! GetMode()
     return get(g:currentmode, mode(), 'Unknown')
 endfunction
 
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0 ? '   '.l:branchname.' ' : ''
-endfunction
-
 set statusline=
 
 set statusline+=%#DiffText#
@@ -59,7 +50,7 @@ set statusline+=\ %{GetMode()}
 set statusline+=%{Padding()}
 
 set statusline+=%#ModeMsg#
-set statusline+=%{StatuslineGit()}
+set statusline+=%{Padding()}
 
 set statusline+=%#StatusLineBufferTitle#
 set statusline+=\ %f
