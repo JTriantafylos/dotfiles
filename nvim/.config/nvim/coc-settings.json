@@ -3,14 +3,15 @@
         "ccls": {
             "command": "ccls",
             "filetypes": ["c", "cc", "cpp", "objc", "objcpp"],
-            "rootPatterns": [".ccls", "compile_commands.json"],
+            "rootPatterns": [".ccls", "build/compile_commands.json"],
             "initializationOptions": {
                 "cache": {
                     "directory": "/tmp/ccls"
                 },
                 "client": {
                     "snippetSupport": true
-                }
+                },
+                "compilationDatabaseDirectory": "build"
             }
         }
     },
