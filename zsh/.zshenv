@@ -23,5 +23,3 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # Android-Studio blank window fix
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-export TERM=xterm-color
