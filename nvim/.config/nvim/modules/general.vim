@@ -4,7 +4,6 @@
 
 set clipboard+=unnamedplus " Enable use of system clipboard
 set cul " Enabled the cursor line highlight
-set hidden " Enable switching buffers without saving
 set cmdheight=2 " Show command output on 2 lines
 set updatetime=100 " Increase diagnostic message frequency
 set shortmess+=c " Disable ins-completion-menu messages
