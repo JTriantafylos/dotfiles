@@ -6,6 +6,10 @@ elif [ -s "$ZSH_NAME" ]; then
 fi
 script_dir=$(cd "$(dirname "$file_name")" && pwd)
 
+if [ ! -d ${XDG_STATE_HOME}/base16/ ]; then
+  echo "mkdir -p ${XDG_STATE_HOME}/base16/"
+fi
+
 if [ -f ${XDG_STATE_HOME}/base16/base16_theme ]; then
   script_name=$(basename "$(realpath ${XDG_STATE_HOME}/base16/base16_theme)" .sh)
   echo "export BASE16_THEME=${script_name#*-}"
