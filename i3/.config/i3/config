@@ -110,6 +110,9 @@ bindsym $mod+f fullscreen toggle
 # Toggle tiling / floating
 bindsym $mod+space floating toggle
 
+# Toggle sticky
+bindsym $mod+shift+space sticky toggle
+
 # Toggle gaps
 bindsym $mod+g gaps inner all toggle 8
 
