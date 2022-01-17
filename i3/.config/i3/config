@@ -47,11 +47,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-# Set destop wallpaper
-exec --no-startup-id feh --no-fehbg --bg-scale $HOME/.config/wallpaper.jpg
-
 # Auto-start compositor
 exec --no-startup-id picom -b
+
+# Set background color
+exec --no-startup-id hsetroot -solid "#515151"
 
 # Auto-start Nextcloud sync client with 5 second delay
 exec --no-startup-id "sh -c 'sleep 5; exec nextcloud'"
