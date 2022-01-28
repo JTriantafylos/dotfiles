@@ -1405,6 +1405,9 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 /* HARDWARE ACCELERATION (https://wiki.archlinux.org/title/Firefox#Disable_hardware_video_acceleration) ***/
 user_pref("layers.acceleration.disabled", true); // Disable all hardware acceleration
 
+/* Prevent fullscreen from taking over the entire monitor (i.e., fullscreen within the confines of the window) ***/
+user_pref("full-screen-api.ignore-widgets", true);
+
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
    Documentation denoted as [-]. Items deprecated prior to FF91 have been archived at [1]
    [1] https://github.com/arkenfox/user.js/issues/123
