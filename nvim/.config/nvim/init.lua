@@ -1,0 +1,12 @@
+require('plugins')
+require('options')
+require('keys')
+require('colors')
+
+require('plugin-conf.treesitter')
+require('plugin-conf.telescope')
+require('plugin-conf.lspconfig')
+require('plugin-conf.cmp')
+require('plugin-conf.comment')
+require('plugin-conf.lualine')
+require('plugin-conf.gps')
