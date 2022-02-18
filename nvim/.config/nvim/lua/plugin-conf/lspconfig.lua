@@ -12,6 +12,7 @@ local on_attach = function(_, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>',      '<cmd>lua vim.lsp.buf.signature_help()<CR>', default_opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', default_opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',         '<cmd>lua require(\'telescope.builtin\').lsp_references()<CR>', default_opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>s',  '<cmd>lua require(\'telescope.builtin\').lsp_document_symbols()<CR>', default_opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh',         '<cmd>ClangdSwitchSourceHeader<CR>', default_opts)
 end
 
