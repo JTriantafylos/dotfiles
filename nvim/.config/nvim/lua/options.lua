@@ -25,3 +25,10 @@ vim.opt.listchars = 'trail:\\u00B7,tab: \\u00B7 '
 
 -- Enable persistent undo
 vim.opt.undofile = true
+
+-- Enable case insensitive searching, except when capitals are explictly searched for
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Indent wrapped lines correctly
+vim.opt.breakindent = true
