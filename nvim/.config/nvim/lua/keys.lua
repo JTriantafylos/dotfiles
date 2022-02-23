@@ -2,7 +2,9 @@
 local default_opts = { noremap = true, silent = true }
 
 -- Use space as the leader key
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Shortcut to write file to disk
 vim.api.nvim_set_keymap('n', 'ww', ':write<CR>', default_opts)
