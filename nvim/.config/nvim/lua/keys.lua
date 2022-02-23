@@ -18,6 +18,3 @@ vim.api.nvim_set_keymap('v', 'p', '"_dP', default_opts)
 
 -- Cancel search highlighting
 vim.api.nvim_set_keymap('n', '<ESC>', ':nohlsearch<CR>', default_opts)
-
--- Switch to most recent buffer
-vim.api.nvim_set_keymap('n', 'gb', '<C-^>', default_opts)
