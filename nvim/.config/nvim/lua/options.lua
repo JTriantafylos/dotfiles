@@ -21,7 +21,7 @@ vim.opt.expandtab = true
 
 -- Show tabs, trailing spaces, and non-breakable space characters
 vim.opt.list = true
-vim.opt.listchars = 'trail:\\u00B7'
+vim.opt.listchars = 'trail:\\u00B7,tab: \\u00B7 '
 
 -- Enable persistent undo
 vim.opt.undofile = true
