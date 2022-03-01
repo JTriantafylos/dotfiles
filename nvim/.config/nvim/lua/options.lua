@@ -32,3 +32,6 @@ vim.opt.smartcase = true
 
 -- Indent wrapped lines correctly
 vim.opt.breakindent = true
+
+-- Disable swap files
+vim.opt.swapfile = false
