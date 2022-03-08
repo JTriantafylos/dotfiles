@@ -64,4 +64,7 @@ return require('packer').startup(function(use)
 
     -- base16 colorschemes with nvim-treesitter compatability
     use 'RRethy/nvim-base16'
+
+    -- Cusor highlight beacon
+    use 'danilamihailov/beacon.nvim'
 end)
