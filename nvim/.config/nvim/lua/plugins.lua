@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
             'hrsh7th/cmp-path', -- file path source for nvim-cmp
             'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
             'L3MON4D3/LuaSnip', -- Snippets plugin
+            'onsails/lspkind-nvim', -- Completion menu icons
         },
     }
 

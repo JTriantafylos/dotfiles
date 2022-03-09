@@ -1,4 +1,5 @@
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 -- Setup
 cmp.setup {
@@ -15,6 +16,16 @@ cmp.setup {
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     },
     formatting = {
+        -- Enable lspkind completion menu formatting
+        format = lspkind.cmp_format({
+            mode = 'symbol_text',
+            menu = ({
+                nvim_lsp = '[LSP]',
+                path = '[Path]',
+                buffer = '[Buffer]',
+                luasnip = '[LuaSnip]',
+            })
+        }),
     },
     snippet = {
         -- Enable vsnip snippet engine
