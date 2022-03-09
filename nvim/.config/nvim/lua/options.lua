@@ -1,5 +1,5 @@
 -- Enable mouse support in Normal mode and Visual mode
-vim.opt.mouse = 'nv'
+vim.opt.mouse = 'nvi'
 
 -- Enable line numbers
 vim.opt.number = true
