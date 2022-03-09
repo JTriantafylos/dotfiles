@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Simple utility to create a floating pulsemixer window using alacritty
-# Requires i3, pulsemixer, and alacritty
+# Simple utility to create a floating pulsemixer window using kitty
+# Requires i3, pulsemixer, and kitty
 
-alacritty -t "volume" -e "pulsemixer"
+kitty --title "volume" "pulsemixer"

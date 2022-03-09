@@ -60,7 +60,7 @@ exec --no-startup-id "sh -c 'sleep 5; exec nextcloud'"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # Kill focused window
 bindsym $mod+q kill

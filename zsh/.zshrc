@@ -19,7 +19,7 @@ select-word-style bash
 
 # Defaults
 export EDITOR=nvim
-export TERMINAL=alacritty
+export TERMINAL=kitty
 export BROWSER=firefox
 
 # Aliases
