@@ -34,6 +34,7 @@ alias rm="rm -iv"
 alias cp="cp -iv"
 alias startx="startx "$XINITRC""
 alias grep="rg -i"
+alias ssh="kitty +kitten ssh"
 
 # Use neovim as the man pager
 export MANPAGER='nvim +Man!'
