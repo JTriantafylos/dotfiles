@@ -35,3 +35,6 @@ vim.opt.breakindent = true
 
 -- Disable swap files
 vim.opt.swapfile = false
+
+-- Give 2 lines for command-line messages, helps to avoid hit-enter prompts
+vim.opt.cmdheight = 2;
