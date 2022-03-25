@@ -25,7 +25,7 @@ BorderColor = ""
 SeparatorAfter = true
 
 [Memory]
-Script = "echo 'Free Memory: ' $(free -h | awk -F' ' 'NR==2 {print $3}')"
+Script = "echo 'Available Memory:' $(free -h | awk -F' ' 'NR==2 {print $7}')"
 Interval = 3000
 ForegroundColor = "#6699cc"
 BackgroundColor = ""
