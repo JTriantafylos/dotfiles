@@ -1,4 +1,4 @@
-Order = [ "Tasha", "Battery", "VPN", "Date" ]
+Order = [ "Tasha", "Battery", "VPN", "Memory", "Date" ]
 
 [Tasha]
 Script = "printf \"I love Tasha!\""
@@ -20,6 +20,14 @@ SeparatorAfter = true
 Script = "printf \"IP Location: $(curl --silent https://am.i.mullvad.net/city), $(curl --silent https://am.i.mullvad.net/country)\""
 Interval = 5000
 ForegroundColor = "#99cc99"
+BackgroundColor = ""
+BorderColor = ""
+SeparatorAfter = true
+
+[Memory]
+Script = "echo 'Free Memory: ' $(free -h | awk -F' ' 'NR==2 {print $3}')"
+Interval = 3000
+ForegroundColor = "#6699cc"
 BackgroundColor = ""
 BorderColor = ""
 SeparatorAfter = true
