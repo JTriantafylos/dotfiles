@@ -66,7 +66,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # Start application launcher
-bindcode $super exec --no-startup-id dmenu-fzf
+bindcode $super exec --no-startup-id rofi -show drun
 bindsym $mod+p exec --no-startup-id volume
 
 # Change focused container
@@ -268,7 +268,6 @@ smart_gaps inverse_outer
 smart_borders on
 
 # Application-specific settings
-for_window [title="dmenu-fzf"] floating enable, resize set 30ppt 25ppt, move to position center, border pixel 3
 for_window [title="volume"] floating enable, resize set 75ppt 40ppt, move to position center, border pixel 3
 for_window [title="Android Emulator.*"] floating enable
 for_window [class="jetbrains-studio" title="Settings"] floating disable
