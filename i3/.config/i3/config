@@ -56,6 +56,9 @@ exec --no-startup-id hsetroot -solid "#515151"
 # Auto-start Nextcloud sync client with 15 second delay
 exec --no-startup-id "sh -c 'sleep 15; exec nextcloud'"
 
+# Auto-start GreenWithEnvy with 5 second delay
+exec --no-startup-id "sh -c 'sleep 5; exec gwe --hide-window'"
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
