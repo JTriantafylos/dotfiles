@@ -10,4 +10,4 @@ sleep 1 && # Give xrdb a moment to load .Xresources
 exec i3 # Start i3
 
 xrandr --fb 5460x2880 --output DP-0 --pos 1620x360 --mode 3840x2160 --scale 1x1 --primary \
---output HDMI-0 --pos 0x0 --mode 1920x1080 --scale 1.5x1.5 # Setup displays
+--output HDMI-0 --pos 0x0 --mode 1920x1080 --scale 1.5x1.5 --rotate left # Setup displays
