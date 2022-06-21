@@ -6,6 +6,7 @@ export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 
+export QT_QPA_PLATFORMTHEME=qt6ct
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
