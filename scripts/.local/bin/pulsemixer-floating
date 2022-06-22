@@ -3,4 +3,4 @@
 # Simple utility to create a floating pulsemixer window using kitty
 # Requires i3, pulsemixer, and kitty
 
-kitty --title "volume" "pulsemixer"
+kitty --title "pulsemixer-floating" "pulsemixer"
