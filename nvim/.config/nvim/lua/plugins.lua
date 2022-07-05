@@ -67,5 +67,5 @@ return require('packer').startup(function(use)
     use 'RRethy/nvim-base16'
 
     -- Cusor highlight beacon
-    use 'danilamihailov/beacon.nvim'
+    use 'rainbowhxch/beacon.nvim'
 end)
