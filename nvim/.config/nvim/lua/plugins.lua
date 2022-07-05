@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-lua/plenary.nvim', -- Common lua library
             'kyazdani42/nvim-web-devicons', -- Icons
-        { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- fzf implementation in C
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- fzf implementation in C
         },
     }
 
