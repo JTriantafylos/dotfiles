@@ -27,6 +27,9 @@ require("clangd_extensions").setup {
     }
 }
 
+-- Setup jedi-language-server
+lspconfig.jedi_language_server.setup{}
+
 -- Setup Lua runetime path
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
