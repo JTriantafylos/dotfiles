@@ -25,7 +25,7 @@ export BROWSER=firefox
 # Aliases
 alias vim="nvim"
 alias cat="bat --theme=base16 --paging=never"
-alias ls="exa --color=auto"
+alias ls="exa -l --color=auto"
 alias l="exa -lah --color=auto"
 alias gs="git status"
 alias gd="git diff"
