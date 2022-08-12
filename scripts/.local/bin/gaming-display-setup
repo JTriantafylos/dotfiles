@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Simple script to setup multi-monitor solution for gaming (vertical 1080p monitor + horizontal 1080p monitor)
+# Simple script to setup single-monitor solution for gaming (horizontal 1080p monitor)
 # Requires xrandr
 
-xrandr --fb 3540x2880 --output DP-0 --pos 1620x900 --mode 1920x1080 --scale 1x1 --primary --output HDMI-0 --pos 0x0 --mode 1920x1080 --scale 1.5x1.5 --rotate left
+xrandr --output DP-0 --mode 1920x1080 --output HDMI-0 --off
