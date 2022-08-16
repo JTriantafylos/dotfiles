@@ -70,7 +70,7 @@ bindsym $mod+q kill
 
 # Start application launcher
 bindcode $super exec --no-startup-id rofi -show drun
-bindsym $mod+p exec --no-startup-id pulsemixer-floating
+bindsym $mod+p exec --no-startup-id pavucontrol
 
 # Change focused container
 bindsym $mod+Left focus left
@@ -263,7 +263,7 @@ smart_gaps inverse_outer
 smart_borders on
 
 # Application-specific settings
-for_window [title="pulsemixer-floating"] floating enable, resize set 75ppt 40ppt, move to position center, border pixel 3
+for_window [class="Pavucontrol"] floating enable, resize set 55ppt 40ppt, move to position center, border pixel 3
 for_window [title="Android Emulator.*"] floating enable
 for_window [class="jetbrains-studio" title="Settings"] floating disable
 for_window [class="^libreoffice"] border normal 3

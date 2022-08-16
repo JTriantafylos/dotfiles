@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Simple utility to create a floating pulsemixer window using kitty
-# Requires i3, pulsemixer, and kitty
-
-kitty --title "pulsemixer-floating" "pulsemixer"
