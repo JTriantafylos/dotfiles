@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-sudo openconnect --user=jamestriantafylos cuvpn.carleton.ca

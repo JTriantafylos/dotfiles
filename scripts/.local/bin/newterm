@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Simple script to spawn a new instance of kitty in the CWD.
-# Requires kitty.
-kitty --working-directory $PWD &
-disown
