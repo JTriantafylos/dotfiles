@@ -234,7 +234,7 @@ element normal.active {
 }
 element selected.normal {
     background-color: @selected-normal-background;
-    text-color:       @selected-foreground;
+    text-color:       @selected-normal-foreground;
 }
 element selected.urgent {
     background-color: @selected-urgent-background;
