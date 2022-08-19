@@ -4,3 +4,6 @@
 [submodule "base16-shell/.config/base16-fzf"]
 	path = base16/.config/base16-fzf
 	url = git@github.com:base16-project/base16-fzf.git
+[submodule "base16/.config/base16-xresources"]
+	path = base16/.config/base16-xresources
+	url = git@github.com:base16-project/base16-xresources.git

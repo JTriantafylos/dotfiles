@@ -61,6 +61,7 @@ source /usr/share/fzf/completion.zsh
 
 # Base16
 BASE16_THEME_DEFAULT="eighties"
+BASE16_SHELL_HOOKS_PATH="$XDG_CONFIG_HOME/base16-hooks"
 
 # Base16 Shell
 BASE16_SHELL_PATH="$XDG_CONFIG_HOME/base16-shell"
