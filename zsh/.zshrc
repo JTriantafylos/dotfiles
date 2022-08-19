@@ -47,6 +47,7 @@ bindkey "^[[1;5D" 	backward-word # Ctrl+Left
 bindkey "^[[H" 	    beginning-of-line # Home
 bindkey "^[[F" 	    end-of-line # End
 bindkey "^[[3~" 	delete-char # Delete
+bindkey "^[[Z"      reverse-menu-complete # Shift+Tab
 
 # Starship prompt
 eval "$(starship init zsh)"
