@@ -24,7 +24,7 @@ export BROWSER=firefox
 
 # Aliases
 alias vim="nvim"
-alias cat="bat --theme=base16 --paging=never"
+alias cat="bat --theme=base16-256 --paging=never"
 alias ls="exa -l --color=auto"
 alias l="exa -lah --color=auto"
 alias gs="git status"
@@ -46,21 +46,10 @@ bindkey "^[[1;5C" 	forward-word # Ctrl+Right
 bindkey "^[[1;5D" 	backward-word # Ctrl+Left
 bindkey "^[[H" 	    beginning-of-line # Home
 bindkey "^[[F" 	    end-of-line # End
-bindkey "^[[2~" 	overwrite-mode # Insert
 bindkey "^[[3~" 	delete-char # Delete
-bindkey "^[[5~" 	beginning-of-history #PageUp
-bindkey "^[[6~" 	end-of-history #PageDown
-bindkey "^[[Z"      reverse-menu-complete # Shift+Tab
 
 # Starship prompt
 eval "$(starship init zsh)"
-
-# Base16-Shell
-BASE16_SHELL="$XDG_CONFIG_HOME/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-base16_eighties
 
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -68,5 +57,16 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-export FZF_DEFAULT_OPTS="--color=16 --info=inline"
-export FZF_PREVIEW_COMMAND="bat --style=numbers --theme=base16 --color=always \$FILE" # Sets the default preview options for fzf.vim
+
+# Base16
+BASE16_THEME_DEFAULT="eighties"
+
+# Base16 Shell
+BASE16_SHELL_PATH="$XDG_CONFIG_HOME/base16-shell"
+[ -n "$PS1" ] && \
+  [ -s "$BASE16_SHELL_PATH/profile_helper.sh" ] && \
+    source "$BASE16_SHELL_PATH/profile_helper.sh"
+
+# Base16 FZF
+BASE16_FZF_PATH="$XDG_CONFIG_HOME/base16-fzf"
+source "$BASE16_FZF_PATH/bash/base16-${BASE16_THEME}.config"
