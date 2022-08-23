@@ -1,4 +1,4 @@
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export HISTFILE="${XDG_STATE_HOME}/zsh/history"
 HISTSIZE=65536
 SAVEHIST=65536
 
@@ -11,16 +11,11 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle :compinstall filename '/home/james/.zshrc'
 autoload -Uz compinit
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
 
 # Module to ctrl+w to last slash or last space
 autoload -U select-word-style
 select-word-style bash
-
-# Defaults
-export EDITOR=nvim
-export TERMINAL=kitty
-export BROWSER=firefox
 
 # Aliases
 alias vim="nvim"
@@ -33,13 +28,9 @@ alias gds="git diff --staged"
 alias mv="mv -iv"
 alias rm="rm -iv"
 alias cp="cp -iv"
-alias startx="startx ${XINITRC}"
+alias startx="startx \${XINITRC}"
 alias grep="rg -i"
 alias ssh="kitty +kitten ssh"
-
-# Use neovim as the man pager
-export MANPAGER='nvim +Man!'
-export MANWIDTH=999
 
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
@@ -58,4 +49,3 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-FZF_DEFAULT_OPTS="--color=16"
