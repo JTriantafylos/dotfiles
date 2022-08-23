@@ -33,7 +33,7 @@ alias gds="git diff --staged"
 alias mv="mv -iv"
 alias rm="rm -iv"
 alias cp="cp -iv"
-alias startx="startx "$XINITRC""
+alias startx="startx ${XINITRC}"
 alias grep="rg -i"
 alias ssh="kitty +kitten ssh"
 
@@ -58,17 +58,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-
-# Base16
-BASE16_THEME_DEFAULT="eighties"
-BASE16_SHELL_HOOKS_PATH="$XDG_CONFIG_HOME/base16-hooks"
-
-# Base16 Shell
-BASE16_SHELL_PATH="$XDG_CONFIG_HOME/base16-shell"
-[ -n "$PS1" ] && \
-  [ -s "$BASE16_SHELL_PATH/profile_helper.sh" ] && \
-    source "$BASE16_SHELL_PATH/profile_helper.sh"
-
-# Base16 FZF
-BASE16_FZF_PATH="$XDG_CONFIG_HOME/base16-fzf"
-source "$BASE16_FZF_PATH/bash/base16-${BASE16_THEME}.config"
+FZF_DEFAULT_OPTS="--color=16"
