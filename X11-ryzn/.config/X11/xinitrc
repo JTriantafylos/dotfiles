@@ -1,8 +1,5 @@
 #!/bin/sh
 
-xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Profile Enabled" 0, 1 # Disable mouse acceleration
-xinput --set-prop "Kingston HyperX Pulsefire Surge" "libinput Accel Speed" 0 # Disable mouse acceleration
-
 xrdb -load "${XDG_CONFIG_HOME}/X11/Xresources" # Load Xresources
 
 . /etc/X11/xinit/xinitrc.d/50-systemd-user.sh # Required for gnome-keyring to work correctly
