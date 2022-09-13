@@ -1,2 +1,5 @@
 # Ignore compiled Packer file
 plugin/
+
+# Ignore dictionary files
+spell/
