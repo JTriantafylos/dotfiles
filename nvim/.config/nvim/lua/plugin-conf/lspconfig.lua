@@ -33,6 +33,9 @@ lspconfig.jedi_language_server.setup{}
 -- Setup typescript-language-server
 lspconfig.tsserver.setup{}
 
+-- Setup ESLint LSP server
+lspconfig.eslint.setup{}
+
 -- Setup Lua runetime path
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
