@@ -7,13 +7,13 @@ local lspconfig = require('lspconfig')
 -- Each LSP server setup method must set on_attach equal to this function
 local on_attach = function(_, bufnr)
     local bufopts = { buffer=bufnr }
-    vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions(), bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover(), bufopts)
-    vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_implementations(), bufopts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help(), bufopts)
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename(), bufopts)
-    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references(), bufopts)
-    vim.keymap.set('n', '<leader>s', require('telescope.builtin').lsp_document_symbols(), bufopts)
+    vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, bufopts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_implementations, bufopts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
+    vim.keymap.set('n', '<leader>s', require('telescope.builtin').lsp_document_symbols, bufopts)
     vim.keymap.set('n', 'gh', '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
 end
 
