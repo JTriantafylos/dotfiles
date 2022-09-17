@@ -52,6 +52,17 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- Bufferline
+    use {
+        'akinsho/bufferline.nvim',
+        requires = {
+            'kyazdani42/nvim-web-devicons' -- Icons
+        },
+        config = function()
+            require('bufferline').setup()
+        end
+    }
+
     -- Statusline codecrumbs component
     use {
         'SmiteshP/nvim-gps',
