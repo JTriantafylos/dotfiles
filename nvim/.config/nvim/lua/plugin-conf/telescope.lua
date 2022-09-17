@@ -1,16 +1,14 @@
 local telescope = require('telescope')
 
 -- Keybinds
-local default_opts = { noremap = true, silent = true }
-
-vim.api.nvim_set_keymap('n', '<leader><leader>', ':lua require(\'telescope.builtin\').builtin() <CR>', default_opts)
-vim.api.nvim_set_keymap('n', '<leader>f', ':lua require(\'telescope.builtin\').find_files() <CR>', default_opts)
-vim.api.nvim_set_keymap('n', '<leader>g', ':lua require(\'telescope.builtin\').live_grep() <CR>', default_opts)
-vim.api.nvim_set_keymap('n', '<leader>b', ':lua require(\'telescope.builtin\').buffers() <CR>', default_opts)
-vim.api.nvim_set_keymap('n', '<leader>c', ':lua require(\'telescope.builtin\').commands() <CR>', default_opts)
-vim.api.nvim_set_keymap('n', '<leader>d', ':lua require(\'telescope.builtin\').diagnostics() <CR>', default_opts)
-vim.api.nvim_set_keymap('n', 'z=', ':lua require(\'telescope.builtin\').spell_suggest() <CR>', default_opts)
-vim.api.nvim_set_keymap('v', 'z=', ':lua require(\'telescope.builtin\').spell_suggest() <CR>', default_opts)
+vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').builtin)
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files)
+vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
+vim.keymap.set('n', '<leader>c', require('telescope.builtin').commands)
+vim.keymap.set('n', '<leader>d', require('telescope.builtin').diagnostics)
+vim.keymap.set('n', 'z=', require('telescope.builtin').spell_suggest)
+vim.keymap.set('v', 'z=', require('telescope.builtin').spell_suggest)
 
 -- Setup
 telescope.setup {
