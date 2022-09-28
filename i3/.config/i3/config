@@ -55,6 +55,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 # Auto-start compositor
 exec --no-startup-id picom -b
 
+# Auto-start unclutter
+exec --no-startup-id unclutter
+
 # Set background color
 exec --no-startup-id hsetroot -solid "#515151"
 
