@@ -29,7 +29,7 @@ export BROWSER=firefox
 
 # Use nvim as the man pager
 export MANPAGER='nvim +Man!'
-export MANWIDTH=999
+export MANWIDTH=80
 
 # fzf
 export FZF_DEFAULT_OPTS="--color=16"
