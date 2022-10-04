@@ -1,0 +1,5 @@
+# Ignore plugins directory
+plugins/
+
+# Ignore tmux-resurrect directory
+resurrect/
