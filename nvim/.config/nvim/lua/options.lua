@@ -18,7 +18,6 @@ vim.opt.clipboard:append('unnamedplus')
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
-vim.api.nvim_create_autocmd('filetype', { pattern = { 'javascript', 'typescript' }, command = 'setlocal shiftwidth=2 | setlocal tabstop=2' })
 
 -- Show tabs, trailing spaces, and non-breakable space characters
 vim.opt.list = true
