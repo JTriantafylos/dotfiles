@@ -36,7 +36,9 @@ alias ssh="kitty +kitten ssh"
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
 bindkey "^[[1;5D" 	backward-word # Ctrl+Left
 bindkey "^[[H" 	    beginning-of-line # Home
+bindkey "^[OH" 	    beginning-of-line # Home
 bindkey "^[[F" 	    end-of-line # End
+bindkey "^[OF" 	    end-of-line # End
 bindkey "^[[3~" 	delete-char # Delete
 bindkey "^[[Z"      reverse-menu-complete # Shift+Tab
 
