@@ -29,8 +29,8 @@ set $mod mod1
 set $super 133
 
 # Output variables
-set $primary_output DP-0
-set $secondary_output HDMI-0
+set $primary_output DisplayPort-2
+set $secondary_output HDMI-A-0
 
 # Program variables
 set $terminal kitty
