@@ -8,6 +8,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 
 # XDG Base Directory fixes
 export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_STYLE_OVERRIDE=adwaita-dark
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
