@@ -58,6 +58,9 @@ exec --no-startup-id picom -b
 # Auto-start unclutter
 exec --no-startup-id unclutter
 
+# Auto-start corectrl
+exec --no-startup-id corectrl
+
 # Set background color
 exec --no-startup-id hsetroot -solid "#515151"
 
