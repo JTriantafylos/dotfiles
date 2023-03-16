@@ -88,6 +88,9 @@ return require('packer').startup(function(use)
     -- Cusor highlight beacon
     use 'rainbowhxch/beacon.nvim'
 
+    -- Indentation guides
+    use 'lukas-reineke/indent-blankline.nvim'
+
     -- Markdown preview
     use 'ellisonleao/glow.nvim'
 end)
