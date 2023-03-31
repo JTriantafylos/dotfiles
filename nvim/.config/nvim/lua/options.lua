@@ -19,10 +19,6 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
 
--- Show tabs, trailing spaces, and non-breakable space characters
-vim.opt.list = true
-vim.opt.listchars = 'trail:\\u00B7,tab:  '
-
 -- Enable persistent undo
 vim.opt.undofile = true
 
