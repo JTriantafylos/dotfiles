@@ -31,6 +31,8 @@ alias cp="cp -iv"
 alias startx="startx \${XINITRC}"
 alias grep="rg -i"
 alias ssh="kitty +kitten ssh"
+alias goto="cd \$(dirname \$(fzf))"
+alias vimf="nvim \$(fzf)"
 
 # Keybinds
 bindkey "^[[1;5C" 	forward-word # Ctrl+Right
