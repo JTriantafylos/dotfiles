@@ -65,9 +65,9 @@ return require('packer').startup(function(use)
 
     -- Statusline codecrumbs component
     use {
-        'SmiteshP/nvim-gps',
+        'SmiteshP/nvim-navic',
         requires = {
-            'nvim-treesitter/nvim-treesitter',
+            'nvim-treesitter/nvim-lspconfig',
         },
     }
 
