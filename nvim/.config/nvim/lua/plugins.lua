@@ -71,14 +71,6 @@ return require('packer').startup(function(use)
         },
     }
 
-    -- Treesitter context
-    use {
-        'nvim-treesitter/nvim-treesitter-context',
-        requires = {
-            'nvim-treesitter/nvim-treesitter',
-        },
-    }
-
     -- Git decorations
     use {
         'lewis6991/gitsigns.nvim',
