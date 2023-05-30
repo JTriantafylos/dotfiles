@@ -1,0 +1,5 @@
+# User-defined configuration snippets
+include ./config.d/*
+
+# Packaged configuration snippets
+include /etc/sway/config.d/*
