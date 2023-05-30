@@ -37,3 +37,6 @@ export FZF_DEFAULT_OPTS="--color=16"
 
 # Android-Studio blank window fix
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Force Firefox to use Wayland
+export MOZ_ENABLE_WAYLAND=1
