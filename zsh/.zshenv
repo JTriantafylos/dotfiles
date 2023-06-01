@@ -32,8 +32,11 @@ export BROWSER=firefox
 export MANPAGER='nvim +Man!'
 export MANWIDTH=80
 
-# fzf
-export FZF_DEFAULT_OPTS="--color=16"
+# fzf Catppuccin Macchiato theme
+export FZF_DEFAULT_OPTS=" \
+    --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+    --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+    --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
 # Android-Studio blank window fix
 export _JAVA_AWT_WM_NONREPARENTING=1
