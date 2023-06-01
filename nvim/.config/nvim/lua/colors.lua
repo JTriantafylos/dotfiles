@@ -1,2 +1,2 @@
--- Enable base16-eighties colorscheme
-vim.cmd('colorscheme base16-eighties')
+-- Enable Catppuccin Macchiato colorscheme
+vim.cmd.colorscheme 'catppuccin-macchiato'

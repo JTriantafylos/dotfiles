@@ -82,8 +82,11 @@ return require('packer').startup(function(use)
     -- Comment helper
     use 'numToStr/Comment.nvim'
 
-    -- base16 colorschemes with nvim-treesitter compatability
-    use 'RRethy/nvim-base16'
+    -- Catppuccin colorschemes
+    use {
+        "catppuccin/nvim",
+        as = "catppuccin"
+    }
 
     -- Cusor highlight beacon
     use 'rainbowhxch/beacon.nvim'
