@@ -1,7 +1,7 @@
 Order = [ "Tasha", "VPN", "Swap", "Memory", "Date" ]
 
 [Tasha]
-Script = "printf \"I love Tasha!\""
+Script = ''' printf "I love Tasha!" '''
 Interval = -1
 ForegroundColor = "#f771f7"
 BackgroundColor = ""
@@ -9,7 +9,7 @@ BorderColor = ""
 SeparatorAfter = true
 
 [VPN]
-Script = "printf \"IP Location: $(curl --silent https://am.i.mullvad.net/city), $(curl --silent https://am.i.mullvad.net/country)\""
+Script = ''' printf "IP Location: $(curl --silent https://am.i.mullvad.net/city), $(curl --silent https://am.i.mullvad.net/country)" '''
 Interval = 5000
 ForegroundColor = "#99cc99"
 BackgroundColor = ""
@@ -17,7 +17,7 @@ BorderColor = ""
 SeparatorAfter = true
 
 [Swap]
-Script = "echo 'Used Swap:' $(free -h | awk -F' ' 'NR==3 {print $3}')"
+Script = ''' echo "Used Swap:" $(free -h | awk -F' ' 'NR==3 {print $3}') '''
 Interval = 3000
 ForegroundColor = "#f2777a"
 BackgroundColor = ""
@@ -25,7 +25,7 @@ BorderColor = ""
 SeparatorAfter = true
 
 [Memory]
-Script = "echo 'Available Memory:' $(free -h | awk -F' ' 'NR==2 {print $7}')"
+Script = ''' echo "Available Memory:" $(free -h | awk -F' ' 'NR==2 {print $7}') '''
 Interval = 3000
 ForegroundColor = "#6699cc"
 BackgroundColor = ""
@@ -33,7 +33,7 @@ BorderColor = ""
 SeparatorAfter = true
 
 [Date]
-Script = "date +\"%l:%M:%S%p %Y-%m-%d\""
+Script = ''' date +"%l:%M:%S%p %Y-%m-%d" '''
 Interval = 1000
 ForegroundColor = "#cc99cc"
 BackgroundColor = ""
