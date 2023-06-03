@@ -1,2 +1,2 @@
--- Enable Catppuccin Macchiato colorscheme
-vim.cmd.colorscheme 'catppuccin-macchiato'
+-- Enable Catppuccin Mocha colorscheme
+vim.cmd.colorscheme 'catppuccin-mocha'
