@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Simple script to setup multi-monitor solution for desktop use (vertical 1080p monitor + horizontal 2160p monitor)
-# Requires xrandr, xrdb, and i3
-
-echo "Xft.dpi: 144" | xrdb -override
-xrandr --fb 5460x2880 --output DP-0 --pos 1620x360 --mode 3840x2160 --scale 1x1 --primary --output HDMI-0 --pos 0x0 --mode 1920x1080 --scale 1.5x1.5 --rotate left
-i3-msg restart
