@@ -11,11 +11,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         local bufopts = { buffer = ev.buf }
 
         vim.keymap.set('n', 'gD',         vim.lsp.buf.declaration,             bufopts)
-        vim.keymap.set('n', 'gd',         telescope.lsp_definitions,           bufopts)
         vim.keymap.set('n', 'K',          vim.lsp.buf.hover,                   bufopts)
-        vim.keymap.set('n', 'gi',         telescope.lsp_implementations,       bufopts)
         vim.keymap.set('n', '<C-k>',      vim.lsp.buf.signature_help,          bufopts)
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename,                  bufopts)
+        vim.keymap.set('n', 'gi',         telescope.lsp_implementations,       bufopts)
+        vim.keymap.set('n', 'gd',         telescope.lsp_definitions,           bufopts)
         vim.keymap.set('n', 'gr',         telescope.lsp_references,            bufopts)
         vim.keymap.set('n', '<leader>s',  telescope.lsp_document_symbols,      bufopts)
         vim.keymap.set('n', 'gh',         '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
