@@ -1,14 +1,15 @@
 local telescope = require('telescope')
+local builtin = require('telescope.builtin')
 
 -- Keybinds
-vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').builtin)
-vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files)
-vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>c', require('telescope.builtin').commands)
-vim.keymap.set('n', '<leader>d', require('telescope.builtin').diagnostics)
-vim.keymap.set('n', 'z=', require('telescope.builtin').spell_suggest)
-vim.keymap.set('v', 'z=', require('telescope.builtin').spell_suggest)
+vim.keymap.set('n', '<leader><leader>', builtin.builtin)
+vim.keymap.set('n', '<leader>f',        builtin.find_files)
+vim.keymap.set('n', '<leader>g',        builtin.live_grep)
+vim.keymap.set('n', '<leader>b',        builtin.buffers)
+vim.keymap.set('n', '<leader>c',        builtin.commands)
+vim.keymap.set('n', '<leader>d',        builtin.diagnostics)
+vim.keymap.set('n', 'z=',               builtin.spell_suggest)
+vim.keymap.set('v', 'z=',               builtin.spell_suggest)
 
 -- Setup
 telescope.setup {
