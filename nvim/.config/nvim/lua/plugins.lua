@@ -7,6 +7,13 @@ return require('packer').startup(function(use)
     -- Treesitter functionality
     use 'nvim-treesitter/nvim-treesitter'
 
+    -- Treesitter text objects
+    use {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      after = 'nvim-treesitter',
+      requires = 'nvim-treesitter/nvim-treesitter',
+    }
+
     -- LSP configuration
     use 'neovim/nvim-lspconfig'
 
