@@ -15,8 +15,10 @@ vim.keymap.set('v', 'z=',               builtin.spell_suggest)
 telescope.setup {
     defaults = {
         mappings = {
-            -- Remove the need for escape to be pressed twice to close Telescope
-            i = { ['<esc>'] = require('telescope.actions').close },
+            i = {
+                ['<esc>'] = require('telescope.actions').close, -- Remove the need for escape to be pressed twice to close Telescope
+                ["<C-space>"] = require('telescope.actions.layout').toggle_preview -- Allow preview toggling
+            }
         },
 
         -- Remove indentation from pickers using ripgrep
