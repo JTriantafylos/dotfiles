@@ -5,63 +5,35 @@ local lspconfig = require('lspconfig')
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 -- Each LSP server setup method must set on_attach equal to this function
-local on_attach = function(_, bufnr)
-    local bufopts = { buffer=bufnr }
-    vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_implementations, bufopts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
-    vim.keymap.set('n', '<leader>s', require('telescope.builtin').lsp_document_symbols, bufopts)
-    vim.keymap.set('n', 'gh', '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
-end
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(ev)
+        local telescope = require('telescope.builtin')
+        local bufopts = { buffer = ev.buf }
 
--- Add borders to LSP floating windows
-local border = {
-    {"🭽", "FloatBorder"},
-    {"▔", "FloatBorder"},
-    {"🭾", "FloatBorder"},
-    {"▕", "FloatBorder"},
-    {"🭿", "FloatBorder"},
-    {"▁", "FloatBorder"},
-    {"🭼", "FloatBorder"},
-    {"▏", "FloatBorder"},
-}
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-    opts = opts or {}
-    opts.border = opts.border or border
-    return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
-
--- Initialize cmp-nvim-lsp capabilities
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        vim.keymap.set('n', 'gD',         vim.lsp.buf.declaration,             bufopts)
+        vim.keymap.set('n', 'gd',         telescope.lsp_definitions,           bufopts)
+        vim.keymap.set('n', 'K',          vim.lsp.buf.hover,                   bufopts)
+        vim.keymap.set('n', 'gi',         telescope.lsp_implementations,       bufopts)
+        vim.keymap.set('n', '<C-k>',      vim.lsp.buf.signature_help,          bufopts)
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename,                  bufopts)
+        vim.keymap.set('n', 'gr',         telescope.lsp_references,            bufopts)
+        vim.keymap.set('n', '<leader>s',  telescope.lsp_document_symbols,      bufopts)
+        vim.keymap.set('n', 'gh',         '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
+    end
+})
 
 -- Setup clangd LSP server
-require('clangd_extensions').setup{
-    server = {
-        on_attach = on_attach,
-        capabilities = capabilities,
-    }
-}
+-- require('clangd_extensions').setup {}
+lspconfig.clangd.setup {}
 
 -- Setup jedi-language-server
-lspconfig.jedi_language_server.setup{
-    on_attach = on_attach
-}
+lspconfig.jedi_language_server.setup {}
 
 -- Setup typescript-language-server
-lspconfig.tsserver.setup{
-    on_attach = on_attach
-}
-
+lspconfig.tsserver.setup {}
 
 -- Setup ESLint LSP server
-lspconfig.eslint.setup{
-    on_attach = on_attach
-}
-
+lspconfig.eslint.setup {}
 
 -- Setup Lua runetime path
 local runtime_path = vim.split(package.path, ';')
@@ -70,7 +42,6 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 -- Setup Lua-Language-Server
 lspconfig.lua_ls.setup {
-    on_attach = on_attach,
     settings = {
         Lua = {
             runtime = {

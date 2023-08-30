@@ -5,19 +5,10 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Treesitter functionality
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-    }
+    use 'nvim-treesitter/nvim-treesitter'
 
     -- LSP configuration
-    use {
-        'neovim/nvim-lspconfig',
-
-        requires = {
-            'p00f/clangd_extensions.nvim', -- clangd LSP extensions plugin
-        },
-    }
+    use 'neovim/nvim-lspconfig'
 
     -- Autocompletion for nvim-lsp
     use {
@@ -40,7 +31,7 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-lua/plenary.nvim', -- Common lua library
             'kyazdani42/nvim-web-devicons', -- Icons
-            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- fzf implementation in C
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }, -- fzf implementation in C
         },
     }
 
@@ -50,17 +41,6 @@ return require('packer').startup(function(use)
         requires = {
             'kyazdani42/nvim-web-devicons', -- Icons
         },
-    }
-
-    -- Bufferline
-    use {
-        'akinsho/bufferline.nvim',
-        requires = {
-            'kyazdani42/nvim-web-devicons' -- Icons
-        },
-        config = function()
-            require('bufferline').setup()
-        end
     }
 
     -- Statusline codecrumbs component
@@ -80,12 +60,17 @@ return require('packer').startup(function(use)
     }
 
     -- Comment helper
-    use 'numToStr/Comment.nvim'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
     -- Catppuccin colorschemes
     use {
-        "catppuccin/nvim",
-        as = "catppuccin"
+        'catppuccin/nvim',
+        as = 'catppuccin'
     }
 
     -- Cusor highlight beacon
@@ -93,7 +78,4 @@ return require('packer').startup(function(use)
 
     -- Indentation guides
     use 'lukas-reineke/indent-blankline.nvim'
-
-    -- Markdown preview
-    use 'ellisonleao/glow.nvim'
 end)

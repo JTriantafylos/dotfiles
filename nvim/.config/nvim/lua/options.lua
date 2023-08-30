@@ -1,4 +1,4 @@
--- Enable mouse support in Normal mode and Visual mode
+-- Enable mouse support in Normal, Visual, and Insert modes
 vim.opt.mouse = 'nvi'
 
 -- Enable line numbers
