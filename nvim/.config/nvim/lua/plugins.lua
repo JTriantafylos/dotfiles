@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
 
         requires = {
             'nvim-lua/plenary.nvim', -- Common lua library
-            'kyazdani42/nvim-web-devicons', -- Icons
+            'nvim-tree/nvim-web-devicons', -- Icons
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }, -- fzf implementation in C
         },
     }
@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = {
-            'kyazdani42/nvim-web-devicons', -- Icons
+            'nvim-tree/nvim-web-devicons', -- Icons
         },
     }
 
