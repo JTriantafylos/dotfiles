@@ -86,4 +86,12 @@ return require('packer').startup(function(use)
 
     -- Indentation guides
     use 'lukas-reineke/indent-blankline.nvim'
+
+    --
+    use {
+        'ggandor/lightspeed.nvim',
+        requires = {
+            'tpope/vim-repeat', -- Enable proper dot-repeat functionality
+        },
+    }
 end)
