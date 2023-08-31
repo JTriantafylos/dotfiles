@@ -18,7 +18,7 @@ telescope.setup {
         mappings = {
             i = {
                 ['<esc>'] = require('telescope.actions').close, -- Remove the need for escape to be pressed twice to close Telescope
-                ["<C-space>"] = require('telescope.actions.layout').toggle_preview -- Allow preview toggling
+                ["<C-y>"] = require('telescope.actions.layout').toggle_preview -- Allow preview toggling
             }
         },
 
