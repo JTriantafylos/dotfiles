@@ -48,3 +48,12 @@ telescope.load_extension('fzf')
 
 -- Load telescope-ui-select.nvim extension
 telescope.load_extension("ui-select")
+
+-- Enable line-wrap in preview
+vim.api.nvim_create_autocmd("User", {
+    pattern = "TelescopePreviewerLoaded",
+    callback = function(args)
+        vim.wo.wrap = true
+        vim.wo.number = true
+    end,
+})
