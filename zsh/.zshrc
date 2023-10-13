@@ -20,8 +20,8 @@ select-word-style bash
 # Aliases
 alias vim="nvim"
 alias cat="bat"
-alias ls="exa -l --color=auto"
-alias l="exa -lah --color=auto"
+alias ls="eza -l --color=auto"
+alias l="eza -lah --color=auto"
 alias gs="git status"
 alias gd="git diff"
 alias gds="git diff --staged"
