@@ -22,6 +22,11 @@ telescope.setup {
             }
         },
 
+        layout_config = {
+            width = 0.95, -- Make the telescope window use more of the available screen width
+            height = 0.95, -- Make the telescope window use more of the available screen height
+        },
+
         -- Remove indentation from pickers using ripgrep
         vimgrep_arguments = {
             'rg',
