@@ -1,6 +1,12 @@
-export HISTFILE="${XDG_STATE_HOME}/zsh/history"
-HISTSIZE=65536
-SAVEHIST=65536
+# History
+export HISTFILE="${XDG_STATE_HOME}/zsh/history" # History file location
+HISTSIZE=262144 # 256K history events stored in the internal history list
+SAVEHIST=262144 # 256K history events saved to the history file
+setopt EXTENDED_HISTORY # Save each history event's beginning timestamp and duration
+setopt HIST_IGNORE_ALL_DUPS # Don't add duplicate history events to the internal history list
+setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from history events
+setopt HIST_SAVE_NO_DUPS # Don't save duplicate history events if they somehow get past HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY # Instantly import and add new history events to the history file
 
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
