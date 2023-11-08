@@ -4,6 +4,9 @@ vim.opt.mouse = 'nvi'
 -- Enable line numbers
 vim.opt.number = true
 
+-- Enable relative line numbers
+vim.opt.relativenumber = true
+
 -- Open all folds when a file is opened
 vim.opt.foldlevelstart = 99
 
