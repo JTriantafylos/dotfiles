@@ -27,6 +27,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- require('clangd_extensions').setup {}
 lspconfig.clangd.setup {}
 
+-- Setup rust-analyzer LSP server
+lspconfig.rust_analyzer.setup {}
+
 -- Setup jedi-language-server
 lspconfig.jedi_language_server.setup {}
 
