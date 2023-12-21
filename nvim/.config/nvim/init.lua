@@ -4,7 +4,6 @@ require('keys')
 require('colors')
 require('style')
 
-require('plugin-conf.treesitter')
 require('plugin-conf.telescope')
 require('plugin-conf.lspconfig')
 require('plugin-conf.cmp')

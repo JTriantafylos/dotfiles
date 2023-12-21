@@ -36,6 +36,9 @@ lspconfig.jedi_language_server.setup {}
 -- Setup typescript-language-server
 lspconfig.tsserver.setup {}
 
+-- Setup vue-language-server
+lspconfig.volar.setup {}
+
 -- Setup ESLint LSP server
 lspconfig.eslint.setup {}
 
