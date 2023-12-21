@@ -20,6 +20,7 @@ local lazy_config = {
     checker = {
         enabled = true, -- Enable automatic plugin update checking
     },
+    lockfile = vim.fn.stdpath("state") .. "/lazy/lazy-lock.json", -- Store lockfile in XDG_STATE_HOME
 }
 
 -- lazy.nvim plugin specification
