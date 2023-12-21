@@ -15,7 +15,6 @@ vim.opt.runtimepath:prepend(lazy_path)
 -- lazy.nvim configuration
 local lazy_config = {
     defaults = {
-        lazy = true, -- Enable lazy plugin loading
         version = "*", -- Install the latest stable version of plugins that support Semver
     },
     checker = {
