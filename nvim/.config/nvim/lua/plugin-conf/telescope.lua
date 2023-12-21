@@ -18,7 +18,7 @@ telescope.setup {
         mappings = {
             i = {
                 ['<esc>'] = require('telescope.actions').close, -- Remove the need for escape to be pressed twice to close Telescope
-                ["<C-y>"] = require('telescope.actions.layout').toggle_preview -- Allow preview toggling
+                ['<C-y>'] = require('telescope.actions.layout').toggle_preview -- Allow preview toggling
             }
         },
 
@@ -52,11 +52,11 @@ telescope.setup {
 telescope.load_extension('fzf')
 
 -- Load telescope-ui-select.nvim extension
-telescope.load_extension("ui-select")
+telescope.load_extension('ui-select')
 
 -- Enable line-wrap in preview
-vim.api.nvim_create_autocmd("User", {
-    pattern = "TelescopePreviewerLoaded",
+vim.api.nvim_create_autocmd('User', {
+    pattern = 'TelescopePreviewerLoaded',
     callback = function(args)
         vim.wo.wrap = true
         vim.wo.number = true

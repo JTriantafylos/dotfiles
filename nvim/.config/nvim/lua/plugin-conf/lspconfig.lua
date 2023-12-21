@@ -41,8 +41,8 @@ lspconfig.eslint.setup {}
 
 -- Setup Lua runetime path
 local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
+table.insert(runtime_path, 'lua/?.lua')
+table.insert(runtime_path, 'lua/?/init.lua')
 
 -- Setup Lua-Language-Server
 lspconfig.lua_ls.setup {
@@ -60,7 +60,7 @@ lspconfig.lua_ls.setup {
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
-                library = vim.api.nvim_get_runtime_file("", true),
+                library = vim.api.nvim_get_runtime_file('', true),
             },
             -- Do not send telemetry data containing a randomized but unique identifier
             telemetry = {
