@@ -89,9 +89,9 @@ local lazy_plugin_spec = {
     -- Indentation guides
     "lukas-reineke/indent-blankline.nvim",
 
-    --
+    -- Improved motions
     {
-        "ggandor/lightspeed.nvim",
+        "ggandor/leap.nvim",
         dependencies = {
             "tpope/vim-repeat", -- Enable proper dot-repeat functionality
         },
