@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
             'nvim-telescope/telescope-ui-select.nvim', -- Use Telescope for UI selections (e.g., code actions)
             'nvim-lua/plenary.nvim', -- Common lua library
             'nvim-tree/nvim-web-devicons', -- Icons
+            'stevearc/aerial.nvim', -- LSP outline
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }, -- fzf implementation in C
         },
     }
