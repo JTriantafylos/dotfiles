@@ -76,19 +76,33 @@ local lazy_plugin_spec = {
     },
 
     -- Git decorations
-    'lewis6991/gitsigns.nvim',
+    {
+        'lewis6991/gitsigns.nvim',
+        config = true,
+    },
 
     -- Comment helper
-    'numToStr/Comment.nvim',
+    {
+        'numToStr/Comment.nvim',
+        config = true,
+    },
 
     -- Catppuccin colorschemes
-    'catppuccin/nvim',
+    {
+        'catppuccin/nvim',
+        name = 'catppuccin',
+    },
 
     -- Cusor highlight beacon
     'rainbowhxch/beacon.nvim',
 
     -- Indentation guides
-    'lukas-reineke/indent-blankline.nvim',
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        main = 'ibl',
+        config = true,
+
+    },
 
     -- Improved motions
     {
@@ -96,6 +110,8 @@ local lazy_plugin_spec = {
         dependencies = {
             'tpope/vim-repeat', -- Enable proper dot-repeat functionality
         },
+        main = 'leap',
+        config = function(plugin) require(plugin.main).add_default_mappings() end,
     },
 
     -- LSP outline
