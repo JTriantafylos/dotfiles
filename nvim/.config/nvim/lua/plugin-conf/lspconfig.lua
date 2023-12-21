@@ -30,8 +30,8 @@ lspconfig.clangd.setup {}
 -- Setup rust-analyzer LSP server
 lspconfig.rust_analyzer.setup {}
 
--- Setup jedi-language-server
-lspconfig.jedi_language_server.setup {}
+-- Setup pyright LSP server
+lspconfig.pyright.setup {}
 
 -- Setup typescript-language-server
 lspconfig.tsserver.setup {}
