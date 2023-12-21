@@ -7,7 +7,6 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = 'path' },
         { name = 'buffer' },
-        { name = 'luasnip' },
     },
     mapping = {
         ['<C-Space>'] = cmp.mapping.complete(),
@@ -23,14 +22,7 @@ cmp.setup {
                 nvim_lsp = '[LSP]',
                 path = '[Path]',
                 buffer = '[Buffer]',
-                luasnip = '[LuaSnip]',
             })
         }),
-    },
-    snippet = {
-        -- Enable vsnip snippet engine
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
     },
 }
