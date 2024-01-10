@@ -41,6 +41,12 @@ bindkey "^[[3~"     delete-char # Delete
 bindkey "^[[Z"      reverse-menu-complete # Shift+Tab
 
 source ~/Projects/clean-zsh-prompt/clean-zsh-prompt.zsh
+czprompt add --name 'ssh' --color 'red' --shell --command '
+    # Check if the current shell is being accessed via SSH
+    if [[ -n "${SSH_CLIENT}" ]] || [[ -n "${SSH_TTY}" ]]; then
+        print "${USER}@$(hostname)";
+    fi
+'
 czprompt add --name 'directory' --color 'blue' --command '%~'
 czprompt add --name 'git_branch' --prefix 'on ' --color 'magenta' --shell --command '
     # Check if we are in a git directory
