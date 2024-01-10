@@ -19,6 +19,7 @@ local lazy_config = {
     },
     checker = {
         enabled = true, -- Enable automatic plugin update checking
+        frequency = 259200, -- Check for updates every 3 days
     },
     lockfile = vim.fn.stdpath('state') .. '/lazy/lazy-lock.json', -- Store lockfile in XDG_STATE_HOME
 }
