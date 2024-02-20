@@ -20,4 +20,7 @@ aerial.setup({
         'Struct',
     },
     show_guides = true,
+    lsp = {
+        diagnostics_trigger_update = false,
+    },
 })
