@@ -55,10 +55,13 @@ czprompt add --name 'git_branch' --prefix 'on ' --color 'magenta' --shell --comm
     # Determine the current branch or tag, and output it
     GIT_BRANCH="$(git symbolic-ref -q --short HEAD)"
     GIT_TAG="$(git describe --tags --exact-match)"
+    GIT_COMMIT="$(git rev-parse --short HEAD)"
     if [[ -n "${GIT_BRANCH}" ]]; then
         print " ${GIT_BRANCH}";
     elif [[ -n "${GIT_TAG}" ]]; then
         print "󰓹 ${GIT_TAG}";
+    elif [[ -n "${GIT_COMMIT}" ]]; then
+        print "󰜘 ${GIT_COMMIT}";
     fi
 '
 czprompt add --name 'git_status' --color 'red' --shell --command '
