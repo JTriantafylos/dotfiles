@@ -35,25 +35,7 @@ local lazy_plugin_spec = {
             highlight = { enable = true },
             incremental_selection = { enable = true },
             indent = { enable = true },
-            textobjects = {
-                select = {
-                    enable = true,
-                    keymaps = {
-                        ['af'] = '@function.outer',
-                        ['if'] = '@function.inner',
-                        ['ac'] = '@class.outer',
-                        ['ic'] = '@class.inner',
-                        ['as'] = '@block.outer',
-                    },
-                },
-            },
         },
-    },
-
-    -- Treesitter text objects
-    {
-        'nvim-treesitter/nvim-treesitter-textobjects',
-        dependencies = 'nvim-treesitter/nvim-treesitter',
     },
 
     -- LSP configuration
