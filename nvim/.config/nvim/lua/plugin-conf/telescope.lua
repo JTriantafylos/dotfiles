@@ -51,9 +51,6 @@ telescope.setup {
 -- Load telescope-fzf-native.nvim extension
 telescope.load_extension('fzf')
 
--- Load telescope-ui-select.nvim extension
-telescope.load_extension('ui-select')
-
 -- Enable line-wrap in preview
 vim.api.nvim_create_autocmd('User', {
     pattern = 'TelescopePreviewerLoaded',

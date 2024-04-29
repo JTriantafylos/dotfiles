@@ -56,12 +56,14 @@ local lazy_plugin_spec = {
     {
         'nvim-telescope/telescope.nvim',
         dependencies = {
-            'nvim-telescope/telescope-ui-select.nvim', -- Telescope for UI selections (e.g., code actions)
             'nvim-lua/plenary.nvim', -- Common lua library
             'nvim-tree/nvim-web-devicons', -- Icons
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }, -- fzf implementation in C
         },
     },
+
+    -- Enhancements for vim.ui components
+    'stevearc/dressing.nvim',
 
     -- Statusline
     {
