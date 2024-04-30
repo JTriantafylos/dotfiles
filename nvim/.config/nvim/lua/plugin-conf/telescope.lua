@@ -9,8 +9,7 @@ vim.keymap.set('n', '<leader>g',        builtin.live_grep)
 vim.keymap.set('n', '<leader>b',        builtin.buffers)
 vim.keymap.set('n', '<leader>c',        builtin.commands)
 vim.keymap.set('n', '<leader>d',        builtin.diagnostics)
-vim.keymap.set('n', 'z=',               builtin.spell_suggest)
-vim.keymap.set('v', 'z=',               builtin.spell_suggest)
+vim.keymap.set({'n', 'v'}, 'z=',        builtin.spell_suggest)
 
 -- Setup
 telescope.setup {
