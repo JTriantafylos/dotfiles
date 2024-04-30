@@ -158,7 +158,6 @@ local lazy_plugin_spec = {
         'lukas-reineke/indent-blankline.nvim',
         main = 'ibl',
         config = true,
-
     },
 
     -- Improved motions
