@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gD',         vim.lsp.buf.declaration,             bufopts)
         vim.keymap.set('n', 'K',          vim.lsp.buf.hover,                   bufopts)
         vim.keymap.set('n', '<C-k>',      vim.lsp.buf.signature_help,          bufopts)
+        vim.keymap.set('n', '<CS-K>',     vim.diagnostic.open_float,           bufopts)
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename,                  bufopts)
         vim.keymap.set('n', '<leader>a',  vim.lsp.buf.code_action,             bufopts)
         vim.keymap.set('n', 'gi',         telescope.lsp_implementations,       bufopts)
@@ -20,6 +21,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gr',         telescope.lsp_references,            bufopts)
         vim.keymap.set('n', '<leader>s',  telescope.lsp_document_symbols,      bufopts)
         vim.keymap.set('n', 'gh',         '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
+        vim.keymap.set('n', '[d',         vim.diagnostic.goto_prev,            bufopts)
+        vim.keymap.set('n', ']d',         vim.diagnostic.goto_next,            bufopts)
     end
 })
 
