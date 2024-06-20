@@ -12,6 +12,26 @@ setopt SHARE_HISTORY # Instantly import and add new history events to the histor
 autoload -U select-word-style
 select-word-style bash
 
+# Goto the directory containing a file selected via fzf
+function goto() {
+    local NEW_DIR
+    if NEW_DIR=$(fzf --query="${1}" --walker=file,follow); then
+        cd $(dirname "${NEW_DIR}")
+    else
+        return 1;
+    fi
+}
+
+# Open a file selected via fzf with neovim
+function vimf() {
+    local FILE
+    if FILE=$(fzf --query="${1}" --walker=file,follow); then
+        nvim "${FILE}"
+    else
+        return 1;
+    fi
+}
+
 # Aliases
 alias vim="nvim"
 alias cat="bat"
@@ -25,8 +45,6 @@ alias rm="rm -iv"
 alias cp="cp -iv"
 alias grep="rg -i"
 alias ssh="kitty +kitten ssh"
-alias goto="cd \$(dirname \$(fzf))"
-alias vimf="nvim \$(fzf)"
 
 # Keybinds
 bindkey "^[[1;5C"   forward-word # Ctrl+Right
