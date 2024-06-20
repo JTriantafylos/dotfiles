@@ -58,6 +58,7 @@ bindkey "^[[4~"     end-of-line # End
 bindkey "^[[3~"     delete-char # Delete
 bindkey "^[[Z"      reverse-menu-complete # Shift+Tab
 
+# clean-zsh-prompt configuration
 source ~/Projects/clean-zsh-prompt/clean-zsh-prompt.zsh
 czprompt add --name 'ssh' --color 'red' --shell --command '
     # Check if the current shell is being accessed via SSH
