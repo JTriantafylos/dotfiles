@@ -41,5 +41,8 @@ vim.opt.swapfile = false
 -- Give 2 lines for command-line messages, helps to avoid hit-enter prompts
 vim.opt.cmdheight = 2;
 
+-- Always keep 3 lines above or below the cursor
+vim.opt.scrolloff = 3;
+
 -- Enable spellcheck for Markdown files
 vim.api.nvim_create_autocmd('filetype', { pattern = { 'markdown', 'text' }, command = 'setlocal spell' })
