@@ -26,7 +26,7 @@ export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 # Default programs
 export EDITOR=nvim
 export TERMINAL=kitty
-export BROWSER=firefox
+export BROWSER=mullvad-browser
 
 # Use nvim as the man pager
 export MANPAGER='nvim +Man!'
