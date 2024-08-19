@@ -181,6 +181,9 @@ local lazy_plugin_spec = {
             'nvim-treesitter/nvim-treesitter',
             'nvim-tree/nvim-web-devicons'
         },
+        opts = {
+            render_modes = { 'n', 'v', 'i', 'c' }
+        },
     }
 }
 
