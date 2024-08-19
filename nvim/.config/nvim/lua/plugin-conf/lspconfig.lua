@@ -23,6 +23,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gh',         '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
         vim.keymap.set('n', '[d',         vim.diagnostic.goto_prev,            bufopts)
         vim.keymap.set('n', ']d',         vim.diagnostic.goto_next,            bufopts)
+
+        -- Enable LSP inlay hints
+        vim.lsp.inlay_hint.enable()
     end
 })
 
