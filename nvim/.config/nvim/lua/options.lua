@@ -47,3 +47,12 @@ vim.opt.scrolloff = 3;
 -- When splitting, create new window to the bottom/right depending on the split direction
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+
+vim.diagnostic.config({
+    virtual_text = {
+        source = "always", -- Show source of diagnostic
+    },
+    float = {
+        source = "always", -- Show source of diagnostic
+    },
+})
