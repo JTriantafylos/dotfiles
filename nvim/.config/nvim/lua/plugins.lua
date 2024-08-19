@@ -172,6 +172,15 @@ local lazy_plugin_spec = {
 
     -- LSP outline
     'stevearc/aerial.nvim',
+
+    -- Markdown enhancements
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter',
+            'nvim-tree/nvim-web-devicons'
+        },
+    }
 }
 
 -- lazy.nvim setup
