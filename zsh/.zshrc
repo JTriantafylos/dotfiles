@@ -8,6 +8,9 @@ setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from history events
 setopt HIST_SAVE_NO_DUPS # Don't save duplicate history events if they somehow get past HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY # Instantly import and add new history events to the history file
 
+# umask
+umask 0077
+
 # Module to ctrl+w to last slash or last space
 autoload -U select-word-style
 select-word-style bash
