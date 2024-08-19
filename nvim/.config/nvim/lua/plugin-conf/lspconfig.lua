@@ -17,6 +17,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', 'gd', telescope.lsp_definitions, bufopts)
 		vim.keymap.set('n', 'gr', telescope.lsp_references, bufopts)
 		vim.keymap.set('n', '<leader>s', telescope.lsp_document_symbols, bufopts)
+		vim.keymap.set('n', '<leader>S', telescope.lsp_dynamic_workspace_symbols, bufopts)
 		vim.keymap.set('n', 'gh', '<cmd>ClangdSwitchSourceHeader<CR>', bufopts)
 		vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, bufopts)
 		vim.keymap.set('n', ']d', vim.diagnostic.goto_next, bufopts)
