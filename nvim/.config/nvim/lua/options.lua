@@ -47,6 +47,3 @@ vim.opt.scrolloff = 3;
 -- When splitting, create new window to the bottom/right depending on the split direction
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
--- Enable spellcheck for Markdown files
-vim.api.nvim_create_autocmd('filetype', { pattern = { 'markdown', 'text' }, command = 'setlocal spell' })
