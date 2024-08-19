@@ -132,9 +132,9 @@ local lazy_plugin_spec = {
         },
     },
 
-    -- Git decorations
+    -- Git signs
     {
-        'lewis6991/gitsigns.nvim',
+        'echasnovski/mini.diff',
         config = true,
     },
 
