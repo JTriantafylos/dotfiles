@@ -15,3 +15,7 @@ vim.keymap.set('v', 'p', '"_dP')
 
 -- Cancel search highlighting
 vim.keymap.set('n', '<ESC>', ':nohlsearch<CR>')
+
+-- Shortcuts to previous and next buffers
+vim.keymap.set('n', '[b', ':bprev<CR>')
+vim.keymap.set('n', ']b', ':bnext<CR>')
