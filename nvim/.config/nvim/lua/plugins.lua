@@ -44,6 +44,7 @@ local lazy_plugin_spec = {
     -- Autocompletion for nvim-lsp
     {
         'hrsh7th/nvim-cmp',
+        branch = 'main',
         dependencies = {
             'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
             'hrsh7th/cmp-buffer', -- Buffer source for nvim-cmp
