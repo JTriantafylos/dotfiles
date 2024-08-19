@@ -1,3 +1,4 @@
+require('commands')
 require('plugins')
 require('options')
 require('keys')
