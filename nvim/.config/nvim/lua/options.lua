@@ -50,9 +50,9 @@ vim.opt.splitright = true
 
 vim.diagnostic.config({
     virtual_text = {
-        source = "always", -- Show source of diagnostic
+        source = true, -- Show source of diagnostic
     },
     float = {
-        source = "always", -- Show source of diagnostic
+        source = true, -- Show source of diagnostic
     },
 })
