@@ -42,7 +42,7 @@ lspconfig.rust_analyzer.setup {}
 lspconfig.pyright.setup {}
 
 -- Setup typescript-language-server
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 
 -- Setup vue-language-server
 lspconfig.volar.setup {}
