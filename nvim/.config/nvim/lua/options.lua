@@ -1,6 +1,9 @@
 -- Enable mouse support in Normal, Visual, and Insert modes
 vim.opt.mouse = 'nvi'
 
+-- Use mouse right-click to extend selection
+vim.opt.mousemodel = 'extend'
+
 -- Enable line numbers
 vim.opt.number = true
 
