@@ -43,3 +43,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Force Firefox to use Wayland
 export MOZ_ENABLE_WAYLAND=1
+
+# Force the GTK to use our desired theme
+# Required for GTK 4 apps to use a custom theme
+export GTK_THEME=catppuccin-mocha-lavender-standard+default
