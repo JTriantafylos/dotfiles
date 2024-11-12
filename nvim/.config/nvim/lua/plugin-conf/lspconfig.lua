@@ -9,8 +9,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		-- Keybinds
 		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
 		vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-		vim.keymap.set('n', '<CS-K>', vim.diagnostic.open_float, bufopts)
+		vim.keymap.set('n', '<C-k>', vim.diagnostic.open_float, bufopts)
 		vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
 		vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, bufopts)
 		vim.keymap.set('n', 'gi', telescope.lsp_implementations, bufopts)
