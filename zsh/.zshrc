@@ -35,6 +35,16 @@ function vimf() {
     fi
 }
 
+# Open a tmux session selected via fzf
+function tmuxf() {
+    local SESSION
+    if SESSION=$(tmux list-sessions -F '#{session_name}' | fzf --query="${1}"); then
+        tmux attach -t "${SESSION}"
+    else
+        return 1;
+    fi
+}
+
 # Aliases
 alias vim="nvim"
 alias cat="bat"
