@@ -48,8 +48,8 @@ function tmuxf() {
 # Aliases
 alias vim="nvim"
 alias cat="bat"
-alias ls="eza -l --color=auto"
-alias l="eza -lah --color=auto"
+alias ls="eza -l --color=auto --icons=auto"
+alias l="eza -lah --color=auto --icons=auto"
 alias gs="git status"
 alias gd="git diff"
 alias gds="git diff --staged"
