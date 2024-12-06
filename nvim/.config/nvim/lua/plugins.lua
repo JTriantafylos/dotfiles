@@ -139,6 +139,12 @@ local lazy_plugin_spec = {
         config = true,
     },
 
+    -- Git blame
+    {
+        'FabijanZulj/blame.nvim',
+        config = true,
+    },
+
     -- Comment helper
     {
         'numToStr/Comment.nvim',
