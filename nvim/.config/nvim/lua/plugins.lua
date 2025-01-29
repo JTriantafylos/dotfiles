@@ -65,6 +65,10 @@ local lazy_plugin_spec = {
 
     -- Enhancements for UI components
     {
+        'stevearc/dressing.nvim',
+        event = 'VeryLazy', -- Lazy-load late in the startup process
+    },
+    {
         'folke/noice.nvim',
         event = 'VeryLazy', -- Lazy-load late in the startup process
         dependencies = {
