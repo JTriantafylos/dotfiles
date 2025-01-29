@@ -14,9 +14,6 @@ vim.opt.runtimepath:prepend(lazy_path)
 
 -- lazy.nvim configuration
 local lazy_config = {
-    defaults = {
-        version = '*', -- Install the latest stable version of plugins that support Semver
-    },
     checker = {
         enabled = true, -- Enable automatic plugin update checking
         frequency = 259200, -- Check for updates every 3 days
