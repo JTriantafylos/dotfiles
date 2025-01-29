@@ -63,8 +63,15 @@ local lazy_plugin_spec = {
         },
     },
 
-    -- Enhancements for vim.ui components
-    'stevearc/dressing.nvim',
+    -- Enhancements for UI components
+    {
+        'folke/noice.nvim',
+        event = 'VeryLazy', -- Lazy-load late in the startup process
+        dependencies = {
+            'MunifTanjim/nui.nvim',
+            'rcarriga/nvim-notify',
+        }
+    },
 
     -- Statusline
     {
