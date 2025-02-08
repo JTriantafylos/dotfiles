@@ -38,6 +38,12 @@ vim.opt.breakindent = true
 -- Highlight cursor line
 vim.opt.cursorline = true
 
+-- Enable 'list' mode (to show various whitespace characters)
+vim.opt.list = true
+
+-- Characters to use for 'list' mode
+vim.opt.listchars = { tab = ' —→', trail = '·', extends = '»', precedes = '«', }
+
 -- Disable swap files
 vim.opt.swapfile = false
 
