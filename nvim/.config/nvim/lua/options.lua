@@ -42,7 +42,7 @@ vim.opt.cursorline = true
 vim.opt.list = true
 
 -- Characters to use for 'list' mode
-vim.opt.listchars = { tab = ' —→', trail = '·', extends = '»', precedes = '«', }
+vim.opt.listchars = { tab = '⤍  ', trail = '·', extends = '»', precedes = '«', }
 
 -- Disable swap files
 vim.opt.swapfile = false
