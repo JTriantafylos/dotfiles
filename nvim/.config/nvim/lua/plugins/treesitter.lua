@@ -4,8 +4,8 @@ return {
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs',
     opts = {
-        -- Automatically install missing parsers when entering a buffer
-        auto_install = true,
+        -- Ensure that all parsers are always installed
+        ensure_installed = 'all',
         -- Enable highlighting and indentation modules
         highlight = { enable = true },
         indent = { enable = true },
