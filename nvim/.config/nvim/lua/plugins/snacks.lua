@@ -36,8 +36,6 @@ return {
         },
         -- Enable smooth-scrolling
         scroll = { enabled = true, },
-        -- Highlight hovered LSP references
-        words = { enabled = true, },
     },
     keys = {
         -- General Keymaps
