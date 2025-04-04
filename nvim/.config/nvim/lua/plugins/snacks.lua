@@ -34,8 +34,6 @@ return {
                 },
             },
         },
-        -- Enable smooth-scrolling
-        scroll = { enabled = true, },
     },
     keys = {
         -- General Keymaps
