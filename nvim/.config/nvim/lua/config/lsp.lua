@@ -29,7 +29,7 @@ vim.lsp.config('luals', {
             },
             workspace = {
                 -- Include Neovim runtime files in the workspace
-                library = vim.api.nvim_get_runtime_file("", true),
+                library = vim.api.nvim_get_runtime_file('', true),
             },
             -- Disable telemetry data collection
             telemetry = {
