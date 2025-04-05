@@ -44,3 +44,6 @@ vim.lsp.enable({
     'clangd',  -- Enable clangd for C/C++ development
     'luals',   -- Enable lua-language-server for Lua development
 })
+
+-- Use <leader>-a to show the code actions palette when in Normal mode
+vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, { desc = 'Show code actions palette', })
