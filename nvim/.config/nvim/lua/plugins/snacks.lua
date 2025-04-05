@@ -29,7 +29,7 @@ return {
                 input = {
                     keys = {
                         -- Close picker on <Esc> rather than exiting to Normal mode
-                        ["<Esc>"] = { "close", mode = { "n", "i" }, },
+                        ['<Esc>'] = { 'close', mode = { 'n', 'i' }, },
                     },
                 },
             },
