@@ -7,5 +7,5 @@ return {
         'echasnovski/mini.icons',
     },
     -- Lazy-load once a markdown file is opened
-    ft = 'markdown',
+    ft = { 'markdown', 'codecompanion', },
 }
