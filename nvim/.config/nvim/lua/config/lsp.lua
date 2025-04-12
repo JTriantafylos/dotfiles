@@ -47,3 +47,4 @@ vim.lsp.enable({
 
 -- Use <leader>-a to show the code actions palette when in Normal mode
 vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, { desc = 'Show code actions palette', })
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'Rename hovered symbol', })
