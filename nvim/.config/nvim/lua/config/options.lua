@@ -80,6 +80,8 @@ vim.opt.breakindent = true
 vim.opt.ignorecase = true
 -- Enable smart case searching
 vim.opt.smartcase = true
+-- Enable the nohlsearch package
+vim.cmd('packadd nohlsearch')
 
 -- ================================
 -- Clipboard Settings
