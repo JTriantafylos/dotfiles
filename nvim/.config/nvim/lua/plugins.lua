@@ -26,13 +26,9 @@ local lazy_plugin_spec = {
     -- Treesitter functionality
     {
         'nvim-treesitter/nvim-treesitter',
-        main = 'nvim-treesitter.configs',
-        opts = {
-            ensure_installed = 'all',
-            highlight = { enable = true },
-            incremental_selection = { enable = true },
-            indent = { enable = true },
-        },
+        lazy = false,
+        branch = 'main',
+        build = ':TSUpdate',
     },
 
     -- LSP configuration
