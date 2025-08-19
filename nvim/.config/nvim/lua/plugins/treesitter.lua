@@ -1,13 +1,11 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    branch = 'main',
     -- Update parsers when plugin is installed or updated
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs',
     opts = {
-        -- Ensure that all parsers are always installed
-        ensure_installed = 'all',
-        -- Enable highlighting and indentation modules
-        highlight = { enable = true },
-        indent = { enable = true },
+        -- Install parsers and queries to the directory where nvim-treesitter is installed
+        install_dir = vim.fn.stdpath('data') .. '/lazy/nvim-treesitter',
     },
 }
