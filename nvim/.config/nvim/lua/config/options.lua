@@ -89,3 +89,15 @@ vim.cmd('packadd nohlsearch')
 
 -- Use the system clipboard for all operations
 vim.opt.clipboard = 'unnamedplus'
+
+-- ================================
+-- Spellcheck Settings
+-- ================================
+
+-- Enable spellcheck in text, markdown, and git commit files
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'text' , 'markdown', 'gitcommit', },
+    callback = function()
+        vim.opt_local.spell = true
+    end
+})
