@@ -22,39 +22,41 @@ return {
             },
         },
         adapters = {
-            opts = {
-                -- Don't show any default adapters during runtime adapter selection
-                show_defaults = false,
-            },
-            -- Configure Qwen2.5-Coder Ollama model adapter
-            qwen = function()
-                return require('codecompanion.adapters').extend('ollama', {
-                    name = 'qwen',
-                    schema = {
-                        model = {
-                            default = 'qwen2.5-coder:7b-instruct',
-                        },
-                        num_ctx = {
-                            default = 16384,
-                        },
+            http = {
+                opts = {
+                    -- Don't show any default adapters during runtime adapter selection
+                    show_defaults = false,
+                },
+                -- Configure Qwen2.5-Coder Ollama model adapter
+                qwen = function()
+                    return require('codecompanion.adapters').extend('ollama', {
+                        name = 'qwen',
+                        schema = {
+                            model = {
+                                default = 'qwen2.5-coder:7b-instruct',
+                            },
+                            num_ctx = {
+                                default = 16384,
+                            },
 
-                        -- Use Qwen's recommended parameters
-                        -- https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/main/generation_config.json
-                        repeat_penalty = {
-                            default = 1.1,
+                            -- Use Qwen's recommended parameters
+                            -- https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/main/generation_config.json
+                            repeat_penalty = {
+                                default = 1.1,
+                            },
+                            temperature = {
+                                default = 0.7,
+                            },
+                            top_p = {
+                                default = 0.8,
+                            },
+                            top_k = {
+                                default = 20,
+                            },
                         },
-                        temperature = {
-                            default = 0.7,
-                        },
-                        top_p = {
-                            default = 0.8,
-                        },
-                        top_k = {
-                            default = 20,
-                        },
-                    },
-                })
-            end,
+                    })
+                end,
+            },
         },
     },
     keys = {
