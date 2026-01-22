@@ -55,7 +55,7 @@ vim.opt.relativenumber = true
 -- Enable 'list' mode to visualize whitespace
 vim.opt.list = true
 -- Define characters for whitespace in 'list' mode
-vim.opt.listchars = { tab = '⤍  ', trail = '·', extends = '»', precedes = '«' }
+vim.opt.listchars = { tab = '-->', trail = '·', extends = '»', precedes = '«' }
 -- Configure display options
 vim.opt.display = { 'lastline', 'uhex' }
 
