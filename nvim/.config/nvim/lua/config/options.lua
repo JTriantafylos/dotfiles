@@ -94,9 +94,9 @@ vim.opt.clipboard = 'unnamedplus'
 -- Spellcheck Settings
 -- ================================
 
--- Enable spellcheck in text, markdown, and git commit files
+-- Enable spellcheck in text, markdown, tex, and git commit files
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'text' , 'markdown', 'gitcommit', },
+    pattern = { 'text' , 'markdown', 'tex', 'gitcommit', },
     callback = function()
         vim.opt_local.spell = true
     end
