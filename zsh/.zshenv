@@ -1,4 +1,4 @@
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # XDG Base Directory definitions
 export XDG_CONFIG_HOME="${HOME}/.config"
