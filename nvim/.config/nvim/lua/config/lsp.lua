@@ -1,3 +1,12 @@
+vim.lsp.config('rust_analyzer', {
+    settings = {
+        ['rust-analyzer'] = {
+            procMacro = { enable = true },
+            cargo = { allFeatures = true },
+        }
+    }
+})
+
 -- Enable the configured LSP servers
 -- These configurations depend on nvim-lspconfig
 vim.lsp.enable({
@@ -5,7 +14,7 @@ vim.lsp.enable({
     'luals',   -- Enable lua-language-server for Lua development
     'basedpyright',    -- Enable basedpyright for Python development
     'ruff',            -- Enable ruff for Python development
-    'rust-analyzer',   -- Enable rust-analyzer for Rust development
+    'rust_analyzer',   -- Enable rust-analyzer for Rust development
 })
 
 -- Use <leader>-a to show the code actions palette when in Normal mode
