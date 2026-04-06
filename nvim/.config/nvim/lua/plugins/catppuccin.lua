@@ -5,6 +5,6 @@ return {
     priority = 1000,
     -- Set colorscheme as soon as plugin is loaded
     init = function()
-        vim.cmd.colorscheme('catppuccin')
+        vim.cmd.colorscheme('catppuccin-nvim')
     end,
 }
