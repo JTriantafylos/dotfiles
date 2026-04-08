@@ -23,6 +23,7 @@ export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 export GDBHISTFILE="${XDG_DATA_HOME}/gdb/history"
+export PYTHON_HISTORY="${XDG_STATE_HOME}/python/history"
 
 # Default programs
 export EDITOR=nvim
