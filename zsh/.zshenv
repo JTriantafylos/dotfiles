@@ -28,7 +28,7 @@ export PYTHON_HISTORY="${XDG_STATE_HOME}/python/history"
 # Default programs
 export EDITOR=nvim
 export TERMINAL=kitty
-export BROWSER=mullvad-browser
+export BROWSER=brave
 
 # Use nvim as the man pager
 export MANPAGER='nvim +Man!'
