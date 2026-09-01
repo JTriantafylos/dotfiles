@@ -141,8 +141,7 @@ czprompt add --name 'git_status' --color 'red' --shell --command '
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # fzf
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source <(fzf --zsh)
 
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
