@@ -8,4 +8,9 @@ return {
     },
     -- Lazy-load once a markdown file is opened
     ft = { 'markdown', 'codecompanion', },
+
+    opts = {
+        -- Render markdown in all modes
+        render_modes = true,
+    },
 }
