@@ -15,6 +15,11 @@ umask 0077
 autoload -U select-word-style
 select-word-style bash
 
+# Module to edit current command in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 # Goto the directory containing a file selected via fzf
 function goto() {
     local NEW_DIR
