@@ -11,7 +11,7 @@ vim.lsp.config('rust_analyzer', {
 -- These configurations depend on nvim-lspconfig
 vim.lsp.enable({
     'clangd',  -- Enable clangd for C/C++ development
-    'luals',   -- Enable lua-language-server for Lua development
+    'lua_ls',  -- Enable lua-language-server for Lua development
     'basedpyright',    -- Enable basedpyright for Python development
     'ruff',            -- Enable ruff for Python development
     'rust_analyzer',   -- Enable rust-analyzer for Rust development
