@@ -58,6 +58,8 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '-->', trail = '·', extends = '»', precedes = '«' }
 -- Configure display options
 vim.opt.display = { 'lastline', 'uhex' }
+-- Add rounded borders to floating windows
+vim.opt.winborder = 'rounded'
 
 -- ================================
 -- Indentation Settings
